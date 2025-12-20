@@ -1,0 +1,431 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.school-name h1 {
+    font-size: 22px;
+    color: #0A3A6B;
+    margin-bottom: 5px;
+}
+
+.school-name p {
+    font-size: 10px;
+    color: #0A3A6B;
+    margin: 0;
+}
+/* BODY */
+body {
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+}
+
+/* TOP BAR */
+/* .top-bar {
+  background: #F4F7FC;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px; 
+   margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #0A3A6B;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #0A3A6B;
+  font-weight: 600;
+  margin-right: 15px;
+} */
+
+.top-bar a:hover {
+  color: #CFA349;
+}
+
+/* HEADER */
+.header {
+  padding: 5px 4px; 
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #CFA349;
+}
+
+.header-left img {
+  height: 150px;
+  max-width: 100%;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+  color: #0A3A6B;
+}
+
+.header-center h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.header-center p {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 3px 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-right a {
+  color: #0A3A6B;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.header-right a:hover {
+  color: #CFA349;
+}
+
+.main-nav {
+  background: linear-gradient(to right, #CFA349, #0A3A6B);
+  padding: 4px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.main-nav.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #0A3A6B;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 25px; 
+  list-style: none;
+  align-items: center;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.25s, color 0.25s;
+}
+
+.main-nav a:hover {
+  opacity: 0.85;
+}
+
+.arrow {
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  padding: 10px 0;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 5000;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  display: block;
+  color: #0A3A6B;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.submenu li a:hover {
+  background: #F4F7FC;
+  color: #175A9F;
+}
+
+.dropdown:hover > .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .main-nav ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header, .top-bar, .main-nav {
+    padding: 10px 15px;
+  }
+
+  .header-left img {
+    height: 60px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    padding: 12px 10px;
+  }
+
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    transform: none !important;
+    visibility: visible;
+    opacity: 1;
+    display: none; /* toggle with JS */
+  }
+}
+
+/* Section Styling */
+.withdrawal-section {
+    background: #f7f9fc;
+    padding: 50px 20px;
+    color: #0A3A6B;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.withdrawal-section h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0A3A6B;
+}
+
+/* Intro Text */
+.intro {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #0A3A6B;
+}
+
+/* Steps */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Single Step */
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #f2f6fc;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+/* Step Number */
+.step-number {
+    background: #0A3A6B;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Step Text */
+.step p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Note */
+.note {
+    margin-top: 30px;
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 5px solid #CFA349;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .withdrawal-section h1 {
+        font-size: 26px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+  background: #0A3A6B;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Logo Styling */
+.footer-school-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Headings */
+.footer-column h3,
+.footer-column h4 {
+  color: #CFA349;
+  margin-bottom: 10px;
+}
+
+/* Text & Links */
+.footer-column p,
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #CFA349;
+}
+
+/* Links side by side */
+.links-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.links-block {
+  flex: 1;
+}
+
+/* Social Icons */
+.footer-social a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #CFA349;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-school-logo {
+    margin: 0 auto 10px;
+  }
+
+  .links-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+}
