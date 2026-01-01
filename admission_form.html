@@ -10,7 +10,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/school-logo.png" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/admission_procedure.css" />
+    <link rel="stylesheet" href="css/admission_form.css" />
 </head>
 
 <body>
@@ -78,7 +78,7 @@
                 <ul class="submenu">
                     <li><a href="admission_procedure.html"><i class="fa fa-info-circle"></i> Admission Procedure</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-file-signature"></i> Admission Form</a></li>
+                    <li><a href="admission_form.html"><i class="fa fa-file-signature"></i> Admission Form</a></li>
                     <li><a href="age_criteria.html"><i class="fa fa-child"></i> Age Criteria</a></li>
                     <li><a href="fees_structure.html"><i class="fa fa-indian-rupee-sign"></i> Fees Structure</a></li>
                     <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a>
@@ -113,230 +113,365 @@
         </ul>
     </nav>
     <!-- Admission banner -->
-    <section class="admission-banner">
+    <section class="form-banner">
         <div class="banner-img-wrapper">
-            <img src="images/school_banner.jpg" alt="Admission Banner" class="banner-img" />
+            <img src="images/form_banner.jpg" alt="Admission Form Banner" class="banner-img" />
         </div>
-        <!-- <div class="banner-content">
-    <h1>Take the First Step Towards Learning</h1>
-    <p>"Begin your child's learning journey with a seamless and transparent admission process."</p>
-  </div> -->
     </section>
 
-    <!-- TOP SECTION -->
-    <div class="top-section">
-        <div class="photo-box">
-            <p>Student Photo<br>(Upload)</p>
-        </div>
 
-        <div class="top-fields">
-            <div class="row">
-                <div class="input-group">
-                    <i class="fa-solid fa-calendar"></i>
-                    <input type="date" placeholder="Issue Date">
+    <section class="admission-form-section">
+        <div class="form-card">
+            <h2 class="form-title">Admission Form</h2>
+            <p class="instruction"><i class="fa-solid fa-circle-info"></i> To be filled by the Parent / Guardian in
+                CAPITAL LETTERS</p>
+
+            <form enctype="multipart/form-data">
+
+                <!-- TOP SECTION -->
+                <h3 class="section-title">Form Details</h3>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-file-lines"></i> Form No *</label><input
+                            type="text" name="formNo" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-calendar-days"></i> Date *</label><input
+                            type="date" name="formDate" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-school"></i> Academic Year *</label><input
+                            type="text" name="academicYear" required></div>
                 </div>
-                <div class="input-group">
-                    <i class="fa-solid fa-school"></i>
-                    <input type="text" placeholder="Academic Year">
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-calendar-check"></i> Admission Date
+                            *</label><input type="date" name="admissionDate" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-id-card"></i> Child's Aadhaar No
+                            *</label><input type="text" name="childAadhaar" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-hashtag"></i> G.R. No</label><input
+                            type="text" name="grNo"></div>
                 </div>
-                <div class="input-group">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <input type="date" placeholder="Received Date">
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-hashtag"></i> U-DISE No</label><input
+                            type="text" name="udiseNo"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-layer-group"></i> Class For *</label><input
+                            type="text" name="classFor" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-id-badge"></i> APAAR ID / PEN (if
+                            available)</label><input type="text" name="apaarId"></div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="input-group">
-                    <i class="fa-solid fa-file"></i>
-                    <input type="text" placeholder="Form No.">
+                <!-- STUDENT INFORMATION -->
+                <h3 class="section-title">Student Information</h3>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-user"></i> Student Full Name *</label><input
+                            type="text" name="studentName" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-user-tie"></i> Father's Name *</label><input
+                            type="text" name="fatherName" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-user-tie"></i> Mother's Name *</label><input
+                            type="text" name="motherName" required></div>
                 </div>
-                <div class="input-group">
-                    <i class="fa-solid fa-id-card"></i>
-                    <input type="text" placeholder="Child Aadhar No.">
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-calendar-days"></i> Date of Birth
+                            *</label><input type="date" name="dob" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-location-dot"></i> Birth Place *</label><input
+                            type="text" name="birthPlace" required></div>
+                    <div class="input-group">
+                        <label>Gender *</label>
+                        <div class="gender-box">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <input type="text" placeholder="GR No.">
+
+                <!-- Address -->
+                <div class="row">
+                    <div class="input-group full-width"><label><i class="fa-solid fa-house"></i> Address
+                            *</label><textarea name="address" rows="2" required></textarea></div>
                 </div>
-                <div class="input-group">
-                    <i class="fa-solid fa-building-columns"></i>
-                    <input type="text" placeholder="UDISE No.">
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-city"></i> City *</label><input type="text"
+                            name="city" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-map"></i> State *</label><input type="text"
+                            name="state" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-location-dot"></i> Taluka</label><input
+                            type="text" name="taluka"></div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-hashtag"></i> Pin Code *</label><input
+                            type="text" name="pin" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-flag"></i> Nationality *</label><input
+                            type="text" name="nationality" required></div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-user-clock"></i> Age *</label><input
+                            type="number" name="age" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-language"></i> Mother Tongue</label><input
+                            type="text" name="motherTongue"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-om"></i> Religion</label><input type="text"
+                            name="religion"></div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-users"></i> Caste</label><input type="text"
+                            name="caste"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-layer-group"></i> Category</label><input
+                            type="text" name="category"></div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-phone"></i> Phone No. *</label><input
+                            type="tel" name="phone" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-envelope"></i> Email Id</label><input
+                            type="email" name="email"></div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-user-check"></i> Staff Child (Yes /
+                            No)</label><input type="text" name="staffChild"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-building-user"></i> If Yes, Name &
+                            Department</label><input type="text" name="staffChildDetails"></div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-palette"></i> Hobbies (If Any)</label><input
+                            type="text" name="hobbies"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-bus"></i> Transportation Required (Yes /
+                            No)</label><input type="text" name="transport"></div>
+                </div>
+
+                <!-- Siblings -->
+                <h3 class="section-title">Sibling Information</h3>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-users"></i> No. of Siblings</label><input
+                            type="number" name="siblingsCount"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-user"></i> Sibling’s Name</label><input
+                            type="text" name="siblingName"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-school"></i> Sibling’s School</label><input
+                            type="text" name="siblingSchool"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-graduation-cap"></i> Sibling’s
+                            Class</label><input type="text" name="siblingClass"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-heart"></i> Relation</label><input type="text"
+                            name="siblingRelation"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-user-clock"></i> Sibling’s Age</label><input
+                            type="number" name="siblingAge"></div>
+                </div>
+
+                <!-- Medical -->
+                <h3 class="section-title">Medical Information</h3>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-notes-medical"></i> Any Medical Conditions or
+                            Allergies? (Yes / No)</label><input type="text" name="medicalCondition"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-file-medical"></i> If Yes, Medical
+                            Details</label><input type="text" name="medicalDetails"></div>
+                </div>
+
+                <!-- Parent Info -->
+                <h3 class="section-title">(B) Parent Information</h3>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-user-tie"></i> Father’s Name *</label><input
+                            type="text" name="fatherNameParent" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-user"></i> Mother’s Name *</label><input
+                            type="text" name="motherNameParent" required></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-calendar-days"></i> Father’s Date of
+                            Birth</label><input type="date" name="fatherDOB"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-calendar-days"></i> Mother’s Date of
+                            Birth</label><input type="date" name="motherDOB"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-graduation-cap"></i> Father’s
+                            Qualification</label><input type="text" name="fatherQualification"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-graduation-cap"></i> Mother’s
+                            Qualification</label><input type="text" name="motherQualification"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-briefcase"></i> Father’s
+                            Occupation</label><input type="text" name="fatherOccupation"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-briefcase"></i> Mother’s
+                            Occupation</label><input type="text" name="motherOccupation"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-id-badge"></i> Father’s
+                            Designation</label><input type="text" name="fatherDesignation"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-id-badge"></i> Mother’s
+                            Designation</label><input type="text" name="motherDesignation"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group full-width"><label><i class="fa-solid fa-building"></i> Father’s Office
+                            Address</label><input type="text" name="fatherOffice"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group full-width"><label><i class="fa-solid fa-building"></i> Mother’s Office
+                            Address</label><input type="text" name="motherOffice"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-phone"></i> Father’s Phone No *</label><input
+                            type="tel" name="fatherPhoneParent" required></div>
+                    <div class="input-group"><label><i class="fa-solid fa-phone"></i> Mother’s Phone No</label><input
+                            type="tel" name="motherPhoneParent"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-envelope"></i> Father’s Email Id</label><input
+                            type="email" name="fatherEmail"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-envelope"></i> Mother’s Email Id</label><input
+                            type="email" name="motherEmail"></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label><i class="fa-solid fa-indian-rupee-sign"></i> Father’s Annual
+                            Income</label><input type="number" name="fatherIncome"></div>
+                    <div class="input-group"><label><i class="fa-solid fa-indian-rupee-sign"></i> Mother’s Annual
+                            Income</label><input type="number" name="motherIncome"></div>
+                </div>
+
+                <!-- Guardian Info -->
+                <h3 class="section-title">Guardian Information</h3>
+                <div class="row">
+                    <div class="input-group"><label>Guardian’s Name *</label><input type="text" name="guardianName"
+                            required></div>
+                    <div class="input-group"><label>Phone No *</label><input type="tel" name="guardianPhone" required>
+                    </div>
+                    <div class="input-group"><label>Email Id</label><input type="email" name="guardianEmail"></div>
+                    <div class="input-group full-width"><label>Address *</label><textarea name="guardianAddress"
+                            rows="2" required></textarea></div>
+                    <div class="input-group"><label>Relation *</label><input type="text" name="guardianRelation"
+                            required></div>
+                    <div class="input-group"><label>Emergency Phone No *</label><input type="tel"
+                            name="guardianEmergencyPhone" required></div>
+                </div>
+
+                <!-- Previous School -->
+                <h3 class="section-title">(D) Previous School Information</h3>
+                <div class="row">
+                    <div class="input-group full-width"><label>Name of Previous School *</label><input type="text"
+                            name="prevSchoolName" required></div>
+                </div>
+                <div class="row">
+                    <div class="input-group full-width"><label>Address of Previous School *</label><textarea
+                            name="prevSchoolAddress" rows="2" required></textarea></div>
+                </div>
+                <div class="row">
+                    <div class="input-group"><label>Last Class / Grade Studied *</label><input type="text"
+                            name="lastClass" required></div>
+                    <div class="input-group"><label>Medium of Instruction *</label><input type="text" name="medium"
+                            required></div>
+                    <div class="input-group"><label>Result *</label><input type="text" name="result" required></div>
+                </div>
+
+                <!-- Document Uploads -->
+                <h3 class="section-title">(E) Documents to be Submitted</h3>
+                <div class="row documents-upload">
+                    <div class="input-group full-width"><label>1. Birth Certificate *</label><input type="file"
+                            name="birthCert" accept=".pdf,.jpg,.jpeg,.png" required></div>
+                    <div class="input-group full-width"><label>2. Passport Size Photos *</label><input type="file"
+                            name="photos" accept=".pdf,.jpg,.jpeg,.png" multiple required></div>
+                    <div class="input-group full-width"><label>3. Medical Fitness Certificate *</label><input
+                            type="file" name="medicalCert" accept=".pdf,.jpg,.jpeg,.png" required></div>
+                    <div class="input-group full-width"><label>4. Aadhaar / Bank Passbook *</label><input type="file"
+                            name="aadhaarBank" accept=".pdf,.jpg,.jpeg,.png" multiple required></div>
+                    <div class="input-group full-width"><label>5. Previous School Leaving Certificate (if
+                            applicable)</label><input type="file" name="leavingCert" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="input-group full-width"><label>6. Previous School Report Card (if
+                            applicable)</label><input type="file" name="reportCard" accept=".pdf,.jpg,.jpeg,.png"></div>
+                    <div class="input-group full-width"><label>7. Address Proof *</label><input type="file"
+                            name="addressProof" accept=".pdf,.jpg,.jpeg,.png" required></div>
+                    <div class="input-group full-width"><label>8. Caste / Income Certificate (if
+                            applicable)</label><input type="file" name="casteIncomeCert" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="input-group full-width"><label>9. Migration Certificate (if applicable)</label><input
+                            type="file" name="migrationCert" accept=".pdf,.jpg,.jpeg,.png"></div>
+                    <div class="input-group full-width"><label>10. Entrance Test Score</label><input type="file"
+                            name="entranceTest" accept=".pdf,.jpg,.jpeg,.png"></div>
+                </div>
+
+                <!-- Submit -->
+                <div class="row">
+                    <button type="submit" class="submit-btn">Submit Admission Form</button>
+                </div>
+
+            </form>
         </div>
-    </div>
+    </section>
 
-    <!-- STUDENT DETAILS -->
-    <h2>Student Details</h2>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-user"></i><input type="text" placeholder="First Name"></div>
-        <div class="input-group"><i class="fa-solid fa-user"></i><input type="text" placeholder="Middle Name"></div>
-        <div class="input-group"><i class="fa-solid fa-user"></i><input type="text" placeholder="Last Name"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-user-tie"></i><input type="text" placeholder="Father's Name">
-        </div>
-        <div class="input-group"><i class="fa-solid fa-user"></i><input type="text" placeholder="Mother's Name"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-cake-candles"></i><input type="date"
-                placeholder="Date of Birth (Figures)"></div>
-        <div class="input-group"><i class="fa-solid fa-book"></i><input type="text" placeholder="Date of Birth (Words)">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-location-dot"></i><input type="text"
-                placeholder="Place of Birth"></div>
-        <div class="input-group"><i class="fa-solid fa-language"></i><input type="text" placeholder="Mother Tongue">
-        </div>
-        <div class="input-group"><i class="fa-solid fa-language"></i><input type="text"
-                placeholder="Other Languages Known"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-venus-mars"></i>
-            <select>
-                <option>Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-            </select>
-        </div>
-        <div class="input-group"><i class="fa-solid fa-hourglass-half"></i><input type="number" placeholder="Age"></div>
-        <div class="input-group"><i class="fa-solid fa-droplet"></i><input type="text" placeholder="Blood Group"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-om"></i><input type="text" placeholder="Religion"></div>
-        <div class="input-group"><i class="fa-solid fa-users"></i><input type="text" placeholder="Caste"></div>
-        <div class="input-group"><i class="fa-solid fa-layer-group"></i><input type="text" placeholder="Category"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group full"><i class="fa-solid fa-house"></i><textarea
-                placeholder="Permanent / Correspondence Address"></textarea></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-city"></i><input type="text" placeholder="City / Town"></div>
-        <div class="input-group"><i class="fa-solid fa-map"></i><input type="text" placeholder="State"></div>
-        <div class="input-group"><i class="fa-solid fa-location-pin"></i><input type="text" placeholder="Pincode"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><i class="fa-solid fa-flag"></i><input type="text" placeholder="Nationality"></div>
-        <div class="input-group"><i class="fa-solid fa-envelope"></i><input type="email" placeholder="Email Address">
-        </div>
-        <div class="input-group"><i class="fa-solid fa-phone"></i><input type="tel" placeholder="Phone No."></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group full"><i class="fa-solid fa-heart"></i><textarea placeholder="Hobbies"></textarea></div>
-    </div>
-
-    <!-- MEDICAL -->
-    <h2>Medical Information</h2>
-
-    <div class="row">
-        <div class="radio-group">
-            <label>Medical Condition:</label>
-            <label><input type="radio" name="medical"> Yes</label>
-            <label><input type="radio" name="medical"> No</label>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="input-group full"><textarea placeholder="If Yes, Provide Medical Details"></textarea></div>
-    </div>
-
-    <!-- PARENT DETAILS -->
-    <h2>Parents / Guardian Details</h2>
-
-    <div class="row">
-        <div class="input-group"><input type="text" placeholder="Father Name"></div>
-        <div class="input-group"><input type="text" placeholder="Mother Name"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><input type="tel" placeholder="Father Phone"></div>
-        <div class="input-group"><input type="tel" placeholder="Mother Phone"></div>
-    </div>
-
-    <div class="row">
-        <div class="input-group"><input type="email" placeholder="Parent Email"></div>
-        <div class="input-group"><input type="text" placeholder="Aadhar No."></div>
-    </div>
-
-    <!-- DECLARATION -->
-    <h2>Declaration</h2>
-    <div class="declaration">
-        <p>
-            We confirm that all the information provided by us is correct.
-            We agree to inform the school of any changes.
-            Any incorrect information will result in cancellation of admission.
-        </p>
-    </div>
-    </div>
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-container">
-            <!-- Left Column: Logo + School Info -->
-            <div class="footer-column footer-logo">
-                <img src="images/school-logo.png" alt="School Logo" class="footer-school-logo" />
-                <p>Managed by Lala Govindramjee Charitable Society, New Delhi</p>
-                <h3>R.A. Bhageria Educational Academy</h3>
-                <p class="tagline">Service Before Self</p>
-            </div>
 
-            <!-- Middle Column: About Us + Useful Links -->
-            <div class="footer-column footer-links">
-                <div class="links-wrapper">
-                    <div class="links-block">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><a href="#">About School</a></li>
-                            <li><a href="vision_mission.html">Mission & Vision</a></li>
-                            <li><a href="our_principal.html">Our Principal</a></li>
-                            <li><a href="motto.html">Our Motto</a></li>
-                        </ul>
-                    </div>
-                    <div class="links-block">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><a href="our_curriculum.html">Curriculum</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Achievements</a></li>
-                            <li><a href="enquiry_form.html">Enquiry Form</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="footer-container">
 
-            <!-- Right Column: Contact Info -->
-            <div class="footer-column footer-contact">
-                <h4>Contact Us</h4>
-                <p>Eksal, Bharuch, Gujarat, India - 392130</p>
-                <p><i class="fas fa-phone"></i> +91 1234567890</p>
-                <p><i class="fas fa-envelope"></i> info@example.com</p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+    <!-- Column 1: Logo + Newsletter -->
+    <div class="footer-column footer-logo">
+
+      <div class="logo-inline">
+        <a href="index.html" class="logo-link"></a>
+        <img src="images/school-logo.png" alt="School Logo" class="footer-school-logo">
+        <div>
+          <p class="managed-by">
+            Managed by Lala Govindramjee Charitable Society, New Delhi
+          </p>
+          <h3>R.A. Bhageria Educational Academy</h3>
+          <p class="tagline">Service Before Self</p>
         </div>
+      </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <p>&copy; 2025 R.A. Bhageria Educational Academy. All Rights Reserved.</p>
-        </div>
-    </footer>
+      <!-- Newsletter -->
+      <div class="footer-newsletter-inline">
+        <p class="newsletter-title">Stay Updated</p>
+        <p class="newsletter-subtitle">School News & Announcements</p>
+
+        <form class="newsletter-form-inline" id="newsletterForm">
+          <input type="email" placeholder="Enter your email id" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+
+    </div>
+
+    <!-- Column 2: About Us -->
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">About School</a></li>
+        <li><a href="vision_mission.html">Mission & Vision</a></li>
+        <li><a href="our_principal.html">Our Principal</a></li>
+        <li><a href="motto.html">Our Motto</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Useful Links -->
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="our_curriculum.html">Curriculum</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Achievements</a></li>
+        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Eksal, Bharuch, Gujarat, India - 392130</p>
+      <p> +91 1234567890</p>
+      <p>✉ info@example.com</p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 R.A. Bhageria Educational Academy. All Rights Reserved.</p>
+  </div>
+
+</footer>
 
     <!-- JS -->
     <script src="script.js"></script>
