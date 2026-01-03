@@ -664,14 +664,66 @@ body {
     width: 100%;
     display: block;
 }
-
 .footer {
   background: #0A3A6B;
   color: #ffffff;
   font-size: 14px;
 }
 
-/* Layout */
+/* Newsletter Top Section */
+.footer-newsletter {
+  text-align: center;
+  padding: 25px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.newsletter-title {
+  color: #CFA349;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.newsletter-subtitle {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 10px 12px;
+  width: 240px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px 18px;
+  background: #CFA349;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background: #e2b95c;
+}
+
+#msg {
+  color: #CFA349;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Footer Layout */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -687,7 +739,7 @@ body {
   min-width: 220px;
 }
 
-/* Logo section */
+/* Logo */
 .logo-inline {
   display: flex;
   align-items: center;
@@ -705,53 +757,6 @@ body {
 
 .tagline {
   font-style: italic;
-}
-
-/* Newsletter */
-.footer-newsletter-inline {
-  margin-top: 20px;
-}
-
-.newsletter-title {
-  color: #CFA349;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.newsletter-subtitle {
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.newsletter-form-inline {
-  display: flex;
-  gap: 8px;
-}
-
-.newsletter-form-inline input {
-  padding: 8px 10px;
-  border-radius: 4px;
-  border: none;
-  width: 180px;
-}
-
-.newsletter-form-inline button {
-  padding: 8px 16px;
-  background: #CFA349;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.newsletter-form-inline button:hover {
-  background: #e2b95c;
-}
-
-span{
-  color: #CFA349;
-  margin-top: 10px;
-  display: block;
 }
 
 /* Headings */
@@ -780,7 +785,7 @@ span{
   color: #CFA349;
 }
 
-/* Social */
+/* Social Icons */
 .footer-social a {
   color: #ffffff;
   font-size: 18px;
@@ -791,7 +796,7 @@ span{
   color: #CFA349;
 }
 
-/* Bottom */
+/* Bottom Bar */
 .footer-bottom {
   text-align: center;
   padding: 15px;
@@ -800,6 +805,7 @@ span{
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -809,9 +815,7 @@ span{
     justify-content: center;
   }
 
-  .newsletter-form-inline {
-    justify-content: center;
-  }
 }
+
 
 

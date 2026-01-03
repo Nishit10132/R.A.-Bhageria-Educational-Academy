@@ -61,7 +61,7 @@
                 <a href="#"><i class="fa fa-school"></i> About School <i class="fa fa-caret-down arrow"></i></a>
                 <ul class="submenu">
                     <li><a href="infrastructure.html"><i class="fa fa-building"></i> Infrastructure</a></li>
-                    <li><a href="#"><i class="fa fa-gavel"></i> Rules & Regulations</a></li>
+                    <li><a href="rules_regulations.html"><i class="fa fa-gavel"></i> Rules & Regulations</a></li>
                     <li><a href="timings_uniform.html"><i class="fa fa-clock"></i> Timings & Uniform</a></li>
                     <li><a href="transport.html"><i class="fa fa-bus"></i> Transport Facility</a></li>
                     <li><a href="#"><i class="fa fa-calendar"></i> Annual Planner 2025-26</a></li>
@@ -76,7 +76,7 @@
                 <ul class="submenu">
                     <li><a href="admission_procedure.html"><i class="fa fa-info-circle"></i> Admission Procedure</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-file-signature"></i> Admission Form</a></li>
+                    <li><a href="admission_form.html"><i class="fa fa-file-signature"></i> Admission Form</a></li>
                     <li><a href="age_criteria.html"><i class="fa fa-child"></i> Age Criteria</a></li>
                     <li><a href="fees_structure.html"><i class="fa fa-indian-rupee-sign"></i> Fees Structure</a></li>
                     <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a>
@@ -287,85 +287,83 @@
         </div>
     </section>
 
-    <footer class="footer">
+   <footer class="footer">
 
-        <div class="footer-container">
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <p class="newsletter-title">Stay Updated</p>
+        <p class="newsletter-subtitle">School News & Announcements</p>
 
-            <!-- Column 1: Logo + Newsletter -->
-            <div class="footer-column footer-logo">
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email id" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <span id="msg"></span>
+    </div>
 
-                <div class="logo-inline">
-                    <a href="index.html" class="logo-link"></a>
-                    <img src="images/school-logo.png" alt="School Logo" class="footer-school-logo">
-                    <div>
-                        <p class="managed-by">
-                            Managed by Lala Govindramjee Charitable Society, New Delhi
-                        </p>
-                        <h3>R.A. Bhageria Educational Academy</h3>
-                        <p class="tagline">Service Before Self</p>
-                    </div>
-                </div>
+    <!-- Main Footer Content -->
+    <div class="footer-container">
 
-                <!-- Newsletter -->
-                <div class="footer-newsletter-inline">
-                    <p class="newsletter-title">Stay Updated</p>
-                    <p class="newsletter-subtitle">School News & Announcements</p>
-
-                    <form class="newsletter-form-inline" id="newsletterForm">
-                        <input type="email" placeholder="Enter your email id" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-
-            </div>
-
-            <!-- Column 2: About Us -->
-            <div class="footer-column">
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="#">About School</a></li>
-                    <li><a href="vision_mission.html">Mission & Vision</a></li>
-                    <li><a href="our_principal.html">Our Principal</a></li>
-                    <li><a href="motto.html">Our Motto</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Useful Links -->
-            <div class="footer-column">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="our_curriculum.html">Curriculum</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Achievements</a></li>
-                    <li><a href="enquiry_form.html">Enquiry Form</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Contact -->
-            <div class="footer-column">
-                <h4>Contact Us</h4>
-                <p>Eksal, Bharuch, Gujarat, India - 392130</p>
-                <p> +91 1234567890</p>
-                <p>✉ info@example.com</p>
-
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Column 1: Logo -->
+        <div class="footer-column footer-logo">
+            <div class="logo-inline">
+                <img src="images/school-logo.png" alt="School Logo" class="footer-school-logo">
+                <div>
+                    <p class="managed-by">
+                        Managed by Lala Govindramjee Charitable Society, New Delhi
+                    </p>
+                    <h3>R.A. Bhageria Educational Academy</h3>
+                    <p class="tagline">Service Before Self</p>
                 </div>
             </div>
-
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <p>© 2025 R.A. Bhageria Educational Academy. All Rights Reserved.</p>
+        <!-- Column 2 -->
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">About School</a></li>
+                <li><a href="vision_mission.html">Mission & Vision</a></li>
+                <li><a href="our_principal.html">Our Principal</a></li>
+                <li><a href="motto.html">Our Motto</a></li>
+            </ul>
         </div>
 
-    </footer>
+        <!-- Column 3 -->
+        <div class="footer-column">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><a href="our_curriculum.html">Curriculum</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Achievements</a></li>
+                <li><a href="enquiry_form.html">Enquiry Form</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Eksal, Bharuch, Gujarat, India - 392130</p>
+            <p>+91 1234567890</p>
+            <p>✉ info@example.com</p>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 R.A. Bhageria Educational Academy. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
     <script>
         let currentIndex = 0;
         const slides = document.querySelectorAll(".slide");
