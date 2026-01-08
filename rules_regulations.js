@@ -1,40 +1,41 @@
-const pages = document.querySelectorAll(".page");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-let current = 0;
-
-/* Next */
-nextBtn.addEventListener("click", () => {
-    if (current < pages.length) {
-        pages[current].classList.add("flipped");
-        current++;
+var right = document.getElementsByClassName("right");
+    var si = right.length;
+    var z=1;
+    turnRight();
+    function turnRight()
+    {
+        if(si>=1){
+            si--;
+        }
+        else{
+            si=right.length-1;
+            function sttmot(i){
+                setTimeout(function(){right[i].style.zIndex="auto";},300);
+            }
+            for(var i=0;i<right.length;i++){
+                right[i].className="right";
+                sttmot(i);
+                z=1;
+            }
+        }
+        right[si].classList.add("flip");
+        z++;
+        right[si].style.zIndex=z;
     }
-});
-
-/* Prev */
-prevBtn.addEventListener("click", () => {
-    if (current > 0) {
-        current--;
-        pages[current].classList.remove("flipped");
+    function turnLeft()
+    {
+        if(si<right.length){
+            si++;
+        }
+        else{
+            si=1;
+            for(var i=right.length-1;i>0;i--){
+                right[i].classList.add("flip");
+                right[i].style.zIndex=right.length+1-i;
+            }
+        }
+        right[si-1].className="right";
+        setTimeout(function(){right[si-1].style.zIndex="auto";},350);
     }
-});
 
-/* Keyboard */
-document.addEventListener("keydown", e => {
-    if (e.key === "ArrowRight") nextBtn.click();
-    if (e.key === "ArrowLeft") prevBtn.click();
-});
-
-/* Mobile Swipe */
-let startX = 0;
-
-document.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-});
-
-document.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) nextBtn.click();
-    if (endX - startX > 50) prevBtn.click();
-});
+    
