@@ -43,19 +43,14 @@ body {
   font-weight: 600;
   margin-right: 15px;
 } */
-/* =========================
-   TOP BAR
-========================= */
+
 .top-bar a:hover {
   color: #CFA349;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 .header {
-  padding-top: 6px;
-  padding-bottom: 0px;
+  padding: 5px 4px; 
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -63,37 +58,29 @@ body {
   border-bottom: 3px solid #CFA349;
 }
 
-/* LEFT LOGO */
 .header-left img {
-  height: 95px;
+  height: 150px;
   max-width: 100%;
-  margin: 0;
 }
 
-/* CENTER TEXT */
 .header-center {
   flex: 1;
   text-align: center;
   color: #0A3A6B;
-  margin: 0;
-  padding: 0;
 }
 
 .header-center h1 {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 2px 0;
-  line-height: 1.15;
+  margin: 5px 0;
 }
 
 .header-center p {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
-  margin: 0px;
-  line-height: 1.05;
+  margin: 3px 0;
 }
 
-/* RIGHT ICONS / LINKS */
 .header-right {
   display: flex;
   align-items: center;
@@ -110,13 +97,9 @@ body {
   color: #CFA349;
 }
 
-/* =========================
-   NAVBAR
-========================= */
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
-  margin-top: -6px;
-  padding: 0px;
+  padding: 4px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -124,31 +107,28 @@ body {
 }
 
 .main-nav.scrolled {
-  background: #0A3A6B;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #0A3A6B;
 }
 
 .main-nav ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
+  flex-wrap: wrap; 
+  gap: 25px; 
   list-style: none;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
-/* NAV ITEMS */
 .main-nav li {
   position: relative;
 }
 
 .main-nav a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
-  padding: 6px 10px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -159,16 +139,11 @@ body {
   opacity: 0.85;
 }
 
-/* DROPDOWN ARROW */
 .arrow {
   font-size: 11px;
   margin-left: 4px;
 }
 
-
-/* =========================
-   SUBMENU
-========================= */
 .submenu {
   position: absolute;
   top: 100%;
@@ -180,6 +155,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   display: none;
   z-index: 5000;
+
   opacity: 0;
   visibility: hidden;
   transform: translateY(5px);
@@ -199,7 +175,6 @@ body {
   color: #175A9F;
 }
 
-/* SHOW DROPDOWN */
 .dropdown:hover > .submenu {
   display: block;
   opacity: 1;
@@ -207,9 +182,7 @@ body {
   transform: translateY(0);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .main-nav ul {
     gap: 15px;
@@ -217,22 +190,12 @@ body {
 }
 
 @media (max-width: 1020px) {
-  .header,
-  .top-bar,
-  .main-nav {
-    padding: 8px 12px;
+  .header, .top-bar, .main-nav {
+    padding: 10px 15px;
   }
 
   .header-left img {
-    height: 65px;
-  }
-
-  .header-center h1 {
-    font-size: 26px;
-  }
-
-  .header-center p {
-    font-size: 15px;
+    height: 60px;
   }
 
   .main-nav ul {
@@ -258,7 +221,7 @@ body {
     transform: none !important;
     visibility: visible;
     opacity: 1;
-    display: none;
+    display: none; /* toggle with JS */
   }
 }
 
