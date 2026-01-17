@@ -6,14 +6,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* BODY (GLOBAL) */
-body {
-  overflow-x: hidden; 
-  margin: 0;
-  padding: 0;
-}
-
-/* SCHOOL NAME */
 .school-name h1 {
     font-size: 22px;
     color: #0A3A6B;
@@ -25,8 +17,33 @@ body {
     color: #0A3A6B;
     margin: 0;
 }
+/* BODY */
+body {
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+}
 
 /* TOP BAR */
+/* .top-bar {
+  background: #F4F7FC;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px; 
+   margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #0A3A6B;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #0A3A6B;
+  font-weight: 600;
+  margin-right: 15px;
+} */
+
 .top-bar a:hover {
   color: #CFA349;
 }
@@ -42,8 +59,10 @@ body {
 }
 
 .header-left img {
-  height: 150px;
+  height: 90px;        
+  width: auto;        
   max-width: 100%;
+  object-fit: contain;
 }
 
 .header-center {
@@ -80,7 +99,7 @@ body {
   color: #CFA349;
 }
 
-/* NAVBAR */
+/* Main navbar */
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
@@ -88,6 +107,9 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav.scrolled {
@@ -95,18 +117,23 @@ body {
   background: #0A3A6B;
 }
 
+/* Navbar menu */
 .main-nav ul {
   display: flex;
   flex-wrap: wrap; 
   gap: 25px; 
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar items */
 .main-nav li {
   position: relative;
 }
 
+/* Links */
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -123,31 +150,34 @@ body {
   opacity: 0.85;
 }
 
+/* Arrow icon */
 .arrow {
   font-size: 11px;
   margin-left: 4px;
 }
 
-/* SUBMENU */
+/* ===============================
+   DROPDOWN SUBMENU
+   =============================== */
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
   background: #ffffff;
-  padding: 10px 0;
-  min-width: 220px;
+  padding: 5px 0;
+  min-width: 180px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  display: none;
-  z-index: 5000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(5px);
   transition: all 0.3s ease;
+  z-index: 5000;
 }
 
+/* Submenu links */
 .submenu li a {
-  padding: 10px 20px;
+  padding: 8px 15px;
   display: block;
   color: #0A3A6B;
   font-size: 14px;
@@ -159,49 +189,53 @@ body {
   color: #175A9F;
 }
 
+/* SUBMENU BASE (DESKTOP FIX: removed display:none) */
+/* .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  padding: 5px 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  z-index: 5000;
+} */
+
+/* FIXED HOVER RULE */
 .dropdown:hover > .submenu {
-  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* RESPONSIVE NAV */
-@media (max-width: 1020px) {
-  .header, .top-bar, .main-nav {
-    padding: 10px 15px;
-  }
-
-  .header-left img {
-    height: 60px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    padding: 12px 10px;
-  }
-
-  .submenu {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    transform: none !important;
-    visibility: visible;
-    opacity: 1;
-    display: none; 
-  }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
 }
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+/* HAMBURGER X ANIMATION */
+/* .hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+} */
 
 /* Age Criteria Banner Container */
 .age-banner {
@@ -247,43 +281,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .age-banner h1 {
-    font-size: 2.5rem;
-  }
-  .age-banner p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .age-banner {
-    height: 300px;
-  }
-  .age-banner h1 {
-    font-size: 2rem;
-  }
-  .age-banner p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .age-banner {
-    height: 250px;
-  }
-  .age-banner h1 {
-    font-size: 1.5rem;
-  }
-  .age-banner p {
-    font-size: 0.9rem;
-  }
-}
-/* ========================================== */
-/*        AGE CRITERIA PAGE – ISOLATED        */
-/* ========================================== */
-
+/*   AGE CRITERIA PAGE */
 .age-page {
     font-family: "Poppins", Arial, sans-serif !important;
     background: #f7f9fc;
@@ -349,20 +347,6 @@ body {
 .age-page p strong {
     color: #d9534f;
 }
-
-/* Responsive Age Table */
-@media (max-width: 768px) {
-    .age-page h1 {
-        font-size: 26px;
-    }
-
-    .age-page table th, 
-    .age-page table td {
-        font-size: 13px;
-        padding: 10px;
-    }
-}
-
 
 /* ================= FOOTER BASE ================= */
 .footer {
@@ -548,39 +532,199 @@ body {
   font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* GLOBAL SAFE FIXES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* TABLE RESPONSIVE WRAPPER */
+.age-page table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .age-page {
+    padding: 15px;
+  }
+
+  .age-page table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/*  TABLET & BELOW (≤ 992px) */
 @media (max-width: 992px) {
+
+  /* HEADER */
+  .header-left img {
+    height: 80px;
+  }
+
+  .header-center h1 {
+    font-size: 28px;
+  }
+
+  .header-center p {
+    font-size: 16px;
+  }
+
+  /* NAVBAR */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0A3A6B;
+    margin-top: 10px;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .main-nav li,
+  .main-nav a {
+    width: 100%;
+  }
+
+  /* SUBMENU (CLICK BASED) */
+  .submenu {
+    position: relative;
+    background: #0A3A6B;
+    box-shadow: none;
+    border-radius: 0;
+    display: none;
+  }
+
+  .dropdown.active > .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    color: #ffffff;
+  }
+
+  .submenu li a:hover {
+    background: #175A9F;
+  }
+
+  /* FOOTER */
   .footer-container {
     flex-wrap: wrap;
   }
 
   .footer-column {
     flex: 0 0 50%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
+/* MOBILE DEVICES (≤ 768px) */
 @media (max-width: 768px) {
-  .footer-newsletter {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
     text-align: center;
-    padding: 25px 20px;
+    padding: 10px;
   }
 
-  .newsletter-form {
-    justify-content: center;
+  .header-left img {
+    height: 70px;
   }
 
+  .header-center h1 {
+    font-size: 22px;
+  }
+
+  .header-center p {
+    font-size: 14px;
+  }
+
+  /* BANNER */
+  .age-banner {
+    height: 300px;
+  }
+
+  .age-banner h1 {
+    font-size: 2rem;
+  }
+
+  .age-banner p {
+    font-size: 1rem;
+  }
+
+  /* TABLE */
+  .age-page table th,
+  .age-page table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* FOOTER */
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
 
   .footer-column {
-    flex: 1;
+    width: 100%;
     padding: 15px 0;
   }
 
   .logo-inline {
     justify-content: center;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+
+  .header-center h1 {
+    font-size: 18px;
+  }
+
+  .header-center p {
+    font-size: 12px;
+  }
+
+  .age-banner {
+    height: 250px;
+  }
+
+  .age-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .age-banner p {
+    font-size: 0.9rem;
+  }
+
+  /* TABLE EXTRA SAFETY */
+  .age-page table {
+    font-size: 12px;
+  }
+}
+
+/* DESKTOP ONLY (≥ 993px) */
+@media (min-width: 993px) {
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: flex;
   }
 }

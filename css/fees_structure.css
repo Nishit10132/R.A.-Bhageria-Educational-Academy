@@ -6,14 +6,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* BODY (GLOBAL) */
-body {
-  overflow-x: hidden; 
-  margin: 0;
-  padding: 0;
-}
-
-/* SCHOOL NAME */
 .school-name h1 {
     font-size: 22px;
     color: #0A3A6B;
@@ -25,8 +17,33 @@ body {
     color: #0A3A6B;
     margin: 0;
 }
+/* BODY */
+body {
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+}
 
 /* TOP BAR */
+/* .top-bar {
+  background: #F4F7FC;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px; 
+   margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #0A3A6B;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #0A3A6B;
+  font-weight: 600;
+  margin-right: 15px;
+} */
+
 .top-bar a:hover {
   color: #CFA349;
 }
@@ -42,8 +59,10 @@ body {
 }
 
 .header-left img {
-  height: 150px;
+  height: 90px;        
+  width: auto;        
   max-width: 100%;
+  object-fit: contain;
 }
 
 .header-center {
@@ -80,7 +99,7 @@ body {
   color: #CFA349;
 }
 
-/* NAVBAR */
+/* Main navbar */
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
@@ -88,6 +107,9 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav.scrolled {
@@ -95,18 +117,23 @@ body {
   background: #0A3A6B;
 }
 
+/* Navbar menu */
 .main-nav ul {
   display: flex;
   flex-wrap: wrap; 
-  gap: 25px; 
+  gap:  4px; 
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar items */
 .main-nav li {
   position: relative;
 }
 
+/* Links */
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -123,31 +150,34 @@ body {
   opacity: 0.85;
 }
 
+/* Arrow icon */
 .arrow {
   font-size: 11px;
   margin-left: 4px;
 }
 
-/* SUBMENU */
+/* ===============================
+   DROPDOWN SUBMENU
+   =============================== */
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
   background: #ffffff;
-  padding: 10px 0;
-  min-width: 220px;
+  padding: 5px 0;
+  min-width: 180px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  display: none;
-  z-index: 5000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(5px);
   transition: all 0.3s ease;
+  z-index: 5000;
 }
 
+/* Submenu links */
 .submenu li a {
-  padding: 10px 20px;
+  padding: 8px 15px;
   display: block;
   color: #0A3A6B;
   font-size: 14px;
@@ -159,48 +189,40 @@ body {
   color: #175A9F;
 }
 
+/* SUBMENU BASE (DESKTOP FIX: removed display:none) */
+/* .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  padding: 5px 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  z-index: 5000;
+} */
+
+/* FIXED HOVER RULE */
 .dropdown:hover > .submenu {
-  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* RESPONSIVE NAV */
-@media (max-width: 1020px) {
-  .header, .top-bar, .main-nav {
-    padding: 10px 15px;
-  }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
 
-  .header-left img {
-    height: 60px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    padding: 12px 10px;
-  }
-
-  .submenu {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    transform: none !important;
-    visibility: visible;
-    opacity: 1;
-    display: none; 
-  }
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s ease;
 }
 
 /* Fees Banner Container */
@@ -259,121 +281,83 @@ body {
   font-size: 1.25rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .fees-banner h1 {
-    font-size: 2.5rem;
-  }
-  .fees-banner p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .fees-banner {
-    height: 300px;
-  }
-  .fees-banner h1 {
-    font-size: 2rem;
-  }
-  .fees-banner p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .fees-banner {
-    height: 250px;
-  }
-  .fees-banner h1 {
-    font-size: 1.5rem;
-  }
-  .fees-banner p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ========================================== */
-/*        AGE CRITERIA PAGE – ISOLATED        */
-/* ========================================== */
-
-.age-page {
-    font-family: "Poppins", Arial, sans-serif !important;
-    background: #f7f9fc;
-    padding: 20px;
-    color: #0A3A6B;
+/* FEES STRUCTURE PAGE*/
+.fees-page {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f7f9fc;
+  padding: 20px;
+  color: #0A3A6B;
 }
 
 /* Heading */
-.age-page h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
+.fees-page h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-/* Paragraph */
-.age-page p {
-    text-align: center;
-    font-size: 16px;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    line-height: 1.6;
+/* Description */
+.fees-page p {
+  text-align: center;
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+}
+
+/* Responsive Table Wrapper */
+.fees-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
 }
 
 /* Table */
-.age-page table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: #ffffff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    overflow: hidden;
+.fees-page table {
+  width: 100%;
+  min-width: 650px;
+  margin: auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.age-page table thead {
-    background: #0A3A6B;
-    color: #ffffff;
+.fees-page thead {
+  background: #0A3A6B;
+  color: #ffffff;
 }
 
-.age-page th {
-    padding: 14px;
-    font-size: 15px;
-    text-align: center;
-    font-weight: 600;
+.fees-page th {
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
 }
 
-.age-page td {
-    padding: 12px;
-    font-size: 15px;
-    text-align: center;
-    border-bottom: 1px solid #e6e6e6;
+.fees-page td {
+  padding: 12px;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.age-page tbody tr:nth-child(even) {
-    background: #f2f6fc;
+.fees-page tbody tr:nth-child(even) {
+  background: #f2f6fc;
 }
 
-.age-page tbody tr:last-child td {
-    border-bottom: none;
+.fees-page tbody tr:last-child td {
+  border-bottom: none;
 }
 
-.age-page p strong {
-    color: #d9534f;
-}
-
-/* Responsive Age Table */
-@media (max-width: 768px) {
-    .age-page h1 {
-        font-size: 26px;
-    }
-
-    .age-page table th, 
-    .age-page table td {
-        font-size: 13px;
-        padding: 10px;
-    }
+/* Highlight Note */
+.fees-note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d9534f;
+  font-weight: 600;
 }
 
 /* ================= FOOTER BASE ================= */
@@ -560,27 +544,96 @@ body {
   font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* =========================================
+   GLOBAL SAFETY (NO LAYOUT CHANGE)
+========================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   TABLE RESPONSIVE FIX (LIKE AGE PAGE)
+========================================= */
+
 @media (max-width: 992px) {
-  .footer-container {
-    flex-wrap: wrap;
+
+  .fees-page {
+    padding: 15px;
   }
 
-  .footer-column {
-    flex: 0 0 50%;
-    margin-bottom: 30px;
+  .fees-page table {
+    width: 100%;
   }
 }
 
+/* =========================================
+   MOBILE TABLE SCROLL (MAIN FIX)
+========================================= */
+
 @media (max-width: 768px) {
-  .footer-newsletter {
-    text-align: center;
-    padding: 25px 20px;
+
+  .fees-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .newsletter-form {
-    justify-content: center;
+  .fees-page table {
+    width: 900px;
+    border-collapse: collapse;
   }
+
+  .fees-page th,
+  .fees-page td {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* =========================================
+   HEADER SAFE FIX (NO DESIGN CHANGE)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header-center h1 {
+    font-size: 22px;
+  }
+
+  .header-center p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   BANNER SAFE FIX (NO POSITION CHANGE)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .fees-banner {
+    height: 260px;
+  }
+
+  .fees-banner .banner-content h1,
+  .fees-banner .banner-content h2 {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   FOOTER SAFE FIX
+========================================= */
+
+@media (max-width: 768px) {
 
   .footer-container {
     flex-direction: column;
@@ -588,11 +641,56 @@ body {
   }
 
   .footer-column {
-    flex: 1;
-    padding: 15px 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================
+   GLOBAL SAFETY
+========================================= */
+
+body {
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   GLOBAL SAFETY
+========================================= */
+
+body {
+  overflow-x: hidden;
+}
+
+/* =========================================
+   SMALL MOBILE EXTRA SAFETY
+========================================= */
+
+@media (max-width: 480px) {
+
+  .fees-page th,
+  .fees-page td {
+    font-size: 12px;
   }
 
-  .logo-inline {
-    justify-content: center;
+  .fees-note {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   DESKTOP – FORCE ORIGINAL LAYOUT
+========================================= */
+
+@media (min-width: 993px) {
+
+  .fees-page table {
+    display: table;
+    width: 100%;
+  }
+
+  .fees-table-wrapper {
+    overflow: visible;
   }
 }

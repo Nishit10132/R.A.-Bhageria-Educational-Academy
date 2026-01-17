@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .school-name h1 {
@@ -59,8 +59,10 @@ body {
 }
 
 .header-left img {
-  height: 150px;
+  height: 90px;        
+  width: auto;        
   max-width: 100%;
+  object-fit: contain;
 }
 
 .header-center {
@@ -97,6 +99,7 @@ body {
   color: #CFA349;
 }
 
+/* Main navbar */
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
@@ -104,6 +107,9 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav.scrolled {
@@ -111,18 +117,23 @@ body {
   background: #0A3A6B;
 }
 
+/* Navbar menu */
 .main-nav ul {
   display: flex;
   flex-wrap: wrap; 
   gap: 25px; 
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar items */
 .main-nav li {
   position: relative;
 }
 
+/* Links */
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -139,31 +150,34 @@ body {
   opacity: 0.85;
 }
 
+/* Arrow icon */
 .arrow {
   font-size: 11px;
   margin-left: 4px;
 }
 
+/* ===============================
+   DROPDOWN SUBMENU
+   =============================== */
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
   background: #ffffff;
-  padding: 10px 0;
-  min-width: 220px;
+  padding: 5px 0;
+  min-width: 180px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  display: none;
-  z-index: 5000;
-
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(5px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
+  z-index: 5000;
 }
 
+/* Submenu links */
 .submenu li a {
-  padding: 10px 20px;
+  padding: 8px 15px;
   display: block;
   color: #0A3A6B;
   font-size: 14px;
@@ -175,54 +189,27 @@ body {
   color: #175A9F;
 }
 
+/* FIXED HOVER RULE */
 .dropdown:hover > .submenu {
-  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .main-nav ul {
-    gap: 15px;
-  }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
 }
 
-@media (max-width: 1020px) {
-  .header, .top-bar, .main-nav {
-    padding: 10px 15px;
-  }
-
-  .header-left img {
-    height: 60px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    padding: 12px 10px;
-  }
-
-  .submenu {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    transform: none !important;
-    visibility: visible;
-    opacity: 1;
-    display: none; /* toggle with JS */
-  }
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s ease;
 }
 
 /* Uniform Banner Section */
@@ -312,21 +299,6 @@ body {
 .infrastructure-section .infra-block p {
   font-size: 16px;
   margin-bottom: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .infrastructure-section {
-    padding: 20px 15px;
-  }
-
-  .infrastructure-section .main-heading {
-    font-size: 28px;
-  }
-
-  .infrastructure-section .infra-block h3 {
-    font-size: 20px;
-  }
 }
 
 /* ================= FOOTER BASE ================= */
@@ -513,39 +485,213 @@ body {
   font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+/* -------- Large tablets & small laptops -------- */
+@media (max-width: 1024px) {
+
+  .header-center h1 {
+    font-size: 32px;
+  }
+
+  .header-center p {
+    font-size: 18px;
+  }
+
+  .main-nav ul {
+    gap: 18px;
+  }
+
+  .infra-banner {
+    height: 320px;
+  }
+
+  .infrastructure-section {
+    margin: 30px 20px;
+  }
+
+  .footer-container {
+    padding: 30px 20px;
+  }
+}
+
+/* -------- Tablets -------- */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-left img {
+    height: 70px;
+  }
+
+  .header-center h1 {
+    font-size: 26px;
+  }
+
+  .header-center p {
+    font-size: 16px;
+  }
+
+  /* NAVBAR */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0A3A6B;
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 20px;
+    display: none;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .main-nav li,
+  .main-nav a {
+    width: 100%;
+  }
+
+  /* SUBMENU */
+  .submenu {
+    position: relative;
+    box-shadow: none;
+    background: #114b8a;
+    min-width: 100%;
+  }
+
+  .submenu li a {
+    color: #ffffff;
+    padding-left: 20px;
+  }
+
+  /* BANNER */
+  .infra-banner {
+    height: 260px;
+  }
+
+  .infra-banner .banner-content p {
+    font-size: 16px;
+  }
+
+  /* FOOTER CENTER ALIGN */
   .footer-container {
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
   .footer-column {
     flex: 0 0 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-newsletter {
-    text-align: center;
-    padding: 25px 20px;
-  }
-
-  .newsletter-form {
-    justify-content: center;
-  }
-
-  .footer-container {
+    margin-bottom: 25px;
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
-  .footer-column {
-    flex: 1;
-    padding: 15px 0;
+  .footer-column ul {
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    text-align: center;
   }
 
   .logo-inline {
     justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .footer-social a {
+    margin: 0 6px;
+  }
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 480px) {
+
+  /* HEADER */
+  .header-center h1 {
+    font-size: 22px;
+  }
+
+  .header-center p {
+    font-size: 14px;
+  }
+
+  .header-left img {
+    height: 60px;
+  }
+
+  /* BANNER */
+  .infra-banner {
+    height: 220px;
+  }
+
+  .infra-banner .banner-content p {
+    font-size: 14px;
+  }
+
+  /* CONTENT */
+  .infrastructure-section {
+    padding: 20px 15px;
+  }
+
+  .infrastructure-section .main-heading {
+    font-size: 24px;
+  }
+
+  .infrastructure-section .infra-block h3 {
+    font-size: 18px;
+  }
+
+  .infrastructure-section .infra-block p {
+    font-size: 14px;
+  }
+
+  /* FOOTER FULL CENTER */
+  .footer-column {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .footer-column p,
+  .footer-column a,
+  .footer-column h3,
+  .footer-column h4 {
+    text-align: center;
+  }
+
+  .footer-newsletter {
+    padding: 25px 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
   }
 }

@@ -59,8 +59,10 @@ body {
 }
 
 .header-left img {
-  height: 150px;
+  height: 90px;        
+  width: auto;        
   max-width: 100%;
+  object-fit: contain;
 }
 
 .header-center {
@@ -97,6 +99,7 @@ body {
   color: #CFA349;
 }
 
+/* Main navbar */
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
@@ -104,6 +107,9 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav.scrolled {
@@ -111,18 +117,23 @@ body {
   background: #0A3A6B;
 }
 
+/* Navbar menu */
 .main-nav ul {
   display: flex;
   flex-wrap: wrap; 
   gap: 25px; 
   list-style: none;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar items */
 .main-nav li {
   position: relative;
 }
 
+/* Links */
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -139,31 +150,34 @@ body {
   opacity: 0.85;
 }
 
+/* Arrow icon */
 .arrow {
   font-size: 11px;
   margin-left: 4px;
 }
 
+/* ===============================
+   DROPDOWN SUBMENU
+   =============================== */
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
   background: #ffffff;
-  padding: 10px 0;
-  min-width: 220px;
+  padding: 5px 0;
+  min-width: 180px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  display: none;
-  z-index: 5000;
-
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(5px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
+  z-index: 5000;
 }
 
+/* Submenu links */
 .submenu li a {
-  padding: 10px 20px;
+  padding: 8px 15px;
   display: block;
   color: #0A3A6B;
   font-size: 14px;
@@ -175,54 +189,40 @@ body {
   color: #175A9F;
 }
 
+/* SUBMENU BASE (DESKTOP FIX: removed display:none) */
+/* .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  padding: 5px 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  z-index: 5000;
+} */
+
+/* FIXED HOVER RULE */
 .dropdown:hover > .submenu {
-  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .main-nav ul {
-    gap: 15px;
-  }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
 }
 
-@media (max-width: 1020px) {
-  .header, .top-bar, .main-nav {
-    padding: 10px 15px;
-  }
-
-  .header-left img {
-    height: 60px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    padding: 12px 10px;
-  }
-
-  .submenu {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    transform: none !important;
-    visibility: visible;
-    opacity: 1;
-    display: none; /* toggle with JS */
-  }
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s ease;
 }
 
 /* Contact Banner Container */
@@ -269,45 +269,11 @@ body {
   font-size: 1.25rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .contact-banner h1 {
-    font-size: 2.5rem;
-  }
-  .contact-banner p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-banner {
-    height: 300px;
-  }
-  .contact-banner h1 {
-    font-size: 2rem;
-  }
-  .contact-banner p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-banner {
-    height: 250px;
-  }
-  .contact-banner h1 {
-    font-size: 1.5rem;
-  }
-  .contact-banner p {
-    font-size: 0.9rem;
-  }
-}
-
 /* Container styling */
 .contact-details {
     background-color: #f9f9f9;
     padding: 50px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .contact-details .container {
@@ -358,19 +324,6 @@ body {
     line-height: 1.5;
     margin: 0 auto;
     max-width: 280px;
-}
-
-/* Responsive for small screens */
-@media (max-width: 768px) {
-    .contact-details .container {
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
-
-    .feature-card {
-        max-width: 90%;
-    }
 }
 
 /* CONTACT FORM */
@@ -646,39 +599,233 @@ body {
   font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   GLOBAL SAFE FIXES (SAME AS AGE PAGE)
+===================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   TABLET & BELOW (≤ 992px)
+===================================================== */
 @media (max-width: 992px) {
+
+  /* HEADER */
+  .header-left img {
+    height: 80px;
+  }
+
+  .header-center h1 {
+    font-size: 28px;
+  }
+
+  .header-center p {
+    font-size: 16px;
+  }
+
+  /* NAVBAR */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0A3A6B;
+    margin-top: 10px;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .main-nav li,
+  .main-nav a {
+    width: 100%;
+  }
+
+  /* SUBMENU (CLICK BASED) */
+  .submenu {
+    position: relative;
+    background: #0A3A6B;
+    box-shadow: none;
+    border-radius: 0;
+    display: none;
+  }
+
+  .dropdown.active > .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    color: #ffffff;
+  }
+
+  .submenu li a:hover {
+    background: #175A9F;
+  }
+
+  /* CONTACT BANNER */
+  .contact-banner {
+    height: 320px;
+  }
+
+  .contact-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-banner p {
+    font-size: 1.1rem;
+  }
+
+  /* CONTACT CARDS */
+  .contact-details .container {
+    flex-wrap: wrap;
+  }
+
+  .feature-card {
+    flex: 1 1 48%;
+  }
+
+  /* FOOTER */
   .footer-container {
     flex-wrap: wrap;
   }
 
   .footer-column {
     flex: 0 0 50%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
+/* =====================================================
+   MOBILE DEVICES (≤ 768px)
+===================================================== */
 @media (max-width: 768px) {
-  .footer-newsletter {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
     text-align: center;
-    padding: 25px 20px;
+    padding: 10px;
   }
 
-  .newsletter-form {
-    justify-content: center;
+  .header-left img {
+    height: 70px;
   }
 
+  .header-center h1 {
+    font-size: 22px;
+  }
+
+  .header-center p {
+    font-size: 14px;
+  }
+
+  /* CONTACT BANNER */
+  .contact-banner {
+    height: 280px;
+  }
+
+  .contact-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-banner p {
+    font-size: 1rem;
+  }
+
+  /* CONTACT CARDS */
+  .feature-card {
+    flex: 1 1 100%;
+  }
+
+  .feature-card h3 {
+    font-size: 20px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+
+  /* CONTACT FORM */
+  .contact-form {
+    padding: 30px 15px;
+  }
+
+  .contact-form form {
+    width: 100%;
+  }
+
+  /* LOCATION SECTION */
+  .location-section h2 {
+    font-size: 26px;
+  }
+
+  .location-text {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
 
   .footer-column {
-    flex: 1;
+    width: 100%;
     padding: 15px 0;
   }
 
   .logo-inline {
     justify-content: center;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE (≤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+
+  .header-center h1 {
+    font-size: 18px;
+  }
+
+  .header-center p {
+    font-size: 12px;
+  }
+
+  .contact-banner {
+    height: 240px;
+  }
+
+  .contact-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-banner p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   DESKTOP ONLY (≥ 993px)
+===================================================== */
+@media (min-width: 993px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: flex;
   }
 }

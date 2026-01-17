@@ -43,6 +43,12 @@
 
     <!-- NAVIGATION MENU -->
     <nav class="main-nav">
+        <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="mandatory_disclosure.html"><i class="fa fa-file-alt"></i> Mandatory Disclosures</a></li>
@@ -294,7 +300,44 @@
     </footer>
 
     <!-- JS -->
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const hamburger = document.getElementById("hamburger");
+            const menu = document.querySelector(".main-nav ul");
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            /* HAMBURGER */
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+
+            /* DROPDOWN (MOBILE ONLY) */
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        link.parentElement.classList.toggle("active");
+                    }
+                });
+            });
+
+            /* AUTO CLOSE MENU */
+            document.querySelectorAll(".main-nav a").forEach(link => {
+                link.addEventListener("click", () => {
+                    if (
+                        window.innerWidth <= 992 &&
+                        !link.parentElement.classList.contains("dropdown")
+                    ) {
+                        menu.classList.remove("active");
+                        hamburger.classList.remove("active");
+                    }
+                });
+            });
+
+        });
+    </script>
 </body>
 
 </html>

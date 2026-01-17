@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,13 +26,13 @@
     </div> -->
 
     <!-- HEADER -->
-     <header class="header">
+    <header class="header">
         <div class="header-left">
             <a href="index.html" class="logo-link">
-            <img src="images/logo.png" alt="School Logo" class="school-logo" />
+                <img src="images/logo.png" alt="School Logo" class="school-logo" />
             </a>
         </div>
-        
+
         <div class="header-center">
             <p>Managed by Lala Govindramjee Charitable Society, New Delhi</p>
             <h1>R.A. Bhageria Educational Academy</h1>
@@ -40,8 +41,13 @@
     </header>
 
     <!-- NAVIGATION MENU -->
-    <!-- NAVIGATION MENU -->
     <nav class="main-nav">
+        <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="mandatory_disclosure.html"><i class="fa fa-file-alt"></i> Mandatory Disclosures</a></li>
@@ -73,11 +79,13 @@
             <li class="dropdown">
                 <a href="#"><i class="fa fa-address-card"></i> Admission <i class="fa fa-caret-down arrow"></i></a>
                 <ul class="submenu">
-                    <li><a href="admission_procedure.html"><i class="fa fa-info-circle"></i> Admission Procedure</a></li>
+                    <li><a href="admission_procedure.html"><i class="fa fa-info-circle"></i> Admission Procedure</a>
+                    </li>
                     <li><a href="admission_form.html"><i class="fa fa-file-signature"></i> Admission Form</a></li>
                     <li><a href="age_criteria.html"><i class="fa fa-child"></i> Age Criteria</a></li>
                     <li><a href="fees_structure.html"><i class="fa fa-indian-rupee-sign"></i> Fees Structure</a></li>
-                    <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a></li>
+                    <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a>
+                    </li>
                 </ul>
             </li>
 
@@ -108,34 +116,35 @@
         </ul>
     </nav>
 
-     <!-- Contact Details Banner -->
-<section class="contact-banner">
-  <img src="images/contact_banner.jpg" alt="Contact Banner" class="banner-img">
-  <div class="banner-content">
-    <!-- <h1>Get in Touch</h1>
-    <p>We're here to answer your questions and guide you through every step of the admission process.</p>
-  </div> -->
-</section>
+    <!-- Contact Details Banner -->
+    <section class="contact-banner">
+        <img src="images/contact_banner.jpg" alt="Contact Banner" class="banner-img">
+        <div class="banner-content">
+            <!-- <h1>Get in Touch</h1>
+    <p>We're here to answer your questions and guide you through every step of the admission process.</p> -->
+        </div>
+    </section>
 
-   <section class="contact-details">
-    <div class="container">
-        <div class="feature-card">
-            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-            <h3>Address</h3>
-            <p>Eksal, Bharuch, Gujarat, India - 392130</p>
+    <!-- Contact Info -->
+    <section class="contact-details">
+        <div class="container">
+            <div class="feature-card">
+                <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                <h3>Address</h3>
+                <p>Eksal, Bharuch, Gujarat, India - 392130</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                <h3>Phone</h3>
+                <p>+91 1234567890</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <h3>Email Address</h3>
+                <p>info@example.com</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <i class="fa fa-phone-alt" aria-hidden="true"></i>
-            <h3>Phone</h3>
-            <p>+91 1234567890</p>
-        </div>
-        <div class="feature-card">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <h3>Email Address</h3>
-            <p>info@example.com</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- CONTACT / ENQUIRY FORM -->
     <section class="contact-form">
@@ -232,10 +241,10 @@
                 <p>Eksal, Bharuch, Gujarat, India - 392130</p>
                 <p><a href="tel:+911234567890" class="footer-link"> +91 6358159567</a>
                 <p>
-        <a href="mailto:info@example.com" class="footer-link">
-            rabhageria.education@gmail.com
-        </a>
-    </p>
+                    <a href="mailto:info@example.com" class="footer-link">
+                        rabhageria.education@gmail.com
+                    </a>
+                </p>
 
                 <div class="footer-social">
                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -255,6 +264,44 @@
     </footer>
 
     <!-- JS -->
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const hamburger = document.getElementById("hamburger");
+            const menu = document.querySelector(".main-nav ul");
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            /* HAMBURGER */
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+
+            /* DROPDOWN (MOBILE ONLY) */
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        link.parentElement.classList.toggle("active");
+                    }
+                });
+            });
+
+            /* AUTO CLOSE MENU */
+            document.querySelectorAll(".main-nav a").forEach(link => {
+                link.addEventListener("click", () => {
+                    if (
+                        window.innerWidth <= 992 &&
+                        !link.parentElement.classList.contains("dropdown")
+                    ) {
+                        menu.classList.remove("active");
+                        hamburger.classList.remove("active");
+                    }
+                });
+            });
+
+        });
+    </script>
 </body>
+
 </html>
