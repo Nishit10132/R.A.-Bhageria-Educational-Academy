@@ -1,4 +1,4 @@
-/* RESET */
+/*RESET*/
 * {
   margin: 0;
   padding: 0;
@@ -6,51 +6,23 @@
   font-family: Arial, sans-serif;
 }
 
-.school-name h1 {
-    font-size: 22px;
-    color: #0A3A6B;
-    margin-bottom: 5px;
-}
-
-.school-name p {
-    font-size: 10px;
-    color: #0A3A6B;
-    margin: 0;
-}
-/* BODY */
 body {
-  overflow-x: hidden; 
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* TOP BAR */
-/* .top-bar {
-  background: #F4F7FC;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 20px; 
-   margin-bottom: 0;
-  padding-bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #0A3A6B;
+/*STICKY WRAPPER*/
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #ffffff;
 }
 
-.top-bar a {
-  text-decoration: none;
-  color: #0A3A6B;
-  font-weight: 600;
-  margin-right: 15px;
-} */
-
-.top-bar a:hover {
-  color: #CFA349;
-}
-
-/* HEADER */
+/*HEADER*/
 .header {
-  padding: 5px 4px; 
+  padding: 3px 4px;
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -59,8 +31,8 @@ body {
 }
 
 .header-left img {
-  height: 90px;        
-  width: auto;        
+  height: 60px;
+  /* width: auto; */
   max-width: 100%;
   object-fit: contain;
 }
@@ -72,156 +44,153 @@ body {
 }
 
 .header-center h1 {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
-  margin: 5px 0;
+  margin: 2px 0;
+  line-height: 1.2;
 }
 
 .header-center p {
-  font-size: 22px;
-  font-weight: 500;
-  margin: 3px 0;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-right a {
-  color: #0A3A6B;
   font-size: 18px;
-  transition: color 0.3s;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.header-right a:hover {
-  color: #CFA349;
-}
-
-/* Main navbar */
+/*NAVBAR*/
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: background 0.3s, box-shadow 0.3s;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.main-nav.scrolled {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background: #0A3A6B;
-}
-
-/* Navbar menu */
+/* NAV LIST */
 .main-nav ul {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 25px; 
-  list-style: none;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  gap: 25px;
 }
 
-/* Navbar items */
+.main-nav ul,
+.main-nav li {
+  list-style: none !important;
+}
+
+.main-nav li::marker {
+  content: none;
+}
+
+/*SUBMENU */
+.main-nav ul.submenu {
+  display: block !important;
+  flex-direction: column !important;
+}
+
+.main-nav ul.submenu li {
+  width: 100%;
+}
+
+.main-nav ul.submenu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* NAV ITEMS */
 .main-nav li {
   position: relative;
 }
 
-/* Links */
+/* NAV LINKS */
 .main-nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
   font-size: 15px;
+  font-weight: 600;
   padding: 8px 10px;
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: opacity 0.25s, color 0.25s;
+  white-space: nowrap;
 }
 
-.main-nav a:hover {
-  opacity: 0.85;
-}
-
-/* Arrow icon */
-.arrow {
-  font-size: 11px;
-  margin-left: 4px;
-}
-
-/* ===============================
-   DROPDOWN SUBMENU
-   =============================== */
+/*SUBMENU – STRICT VERTICAL*/
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
+  min-width: 220px;
   background: #ffffff;
-  padding: 5px 0;
-  min-width: 180px;
+  margin: 0;
+  padding: 0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(5px);
-  transition: all 0.3s ease;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
   z-index: 5000;
 }
 
-/* Submenu links */
-.submenu li a {
-  padding: 8px 15px;
+/* FORCE VERTICAL – NO FLEX */
+.submenu {
   display: block;
-  color: #0A3A6B;
+}
+
+/* SUBMENU LIST */
+.submenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SUBMENU LINKS – NO GAP */
+.submenu li a {
+  display: block;
+  padding: 10px 16px;
+  margin: 0;
+
   font-size: 14px;
   font-weight: 500;
+  color: #0A3A6B;
+  white-space: nowrap;
 }
 
+/* HOVER EFFECT */
 .submenu li a:hover {
   background: #F4F7FC;
-  color: #175A9F;
 }
 
-/* Show submenu on hover */
+/* SHOW SUBMENU */
 .dropdown:hover > .submenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* Keep submenu visible when hovering over it */
-.dropdown:hover, 
-.dropdown .submenu:hover {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Hamburger menu */
+/*HAMBURGER (DESKTOP SAFE)*/
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .hamburger span {
   width: 30px;
   height: 3px;
-  background: #fff;
+  background: #ffffff;
   margin: 5px 0;
 }
 
 /* HOMEPAGE SLIDER */
 .home-slider {
     width: 100%;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
     position: relative;
 }
@@ -239,7 +208,7 @@ body {
 
 .slide img {
     width: 100%;
-    height: 500px;
+    height: 700px;
     object-fit: cover;
     display: block;
 }
@@ -249,7 +218,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(10, 58, 107, 0.35);
+    /* background: rgba(10, 58, 107, 0.35); */
 }
 
 .main-content {
@@ -271,7 +240,6 @@ body {
     color: #333;
     margin-bottom: 20px;
 }
-
 
 /* Admission Tile Section */
 .admission-tile {
@@ -613,7 +581,7 @@ img {
     display: block;
 }
 
-/* ================= FOOTER BASE ================= */
+/*FOOTER BASE*/
 .footer {
   background: #0A3A6B;
   color: #ffffff;
@@ -622,7 +590,7 @@ img {
   box-sizing: border-box;
 }
 
-/* ================= NEWSLETTER ================= */
+/*NEWSLETTER*/
 .footer-newsletter {
   text-align: left;
   padding: 30px 60px;
@@ -675,7 +643,7 @@ img {
   margin-top: 8px;
 }
 
-/* ================= FOOTER CONTENT ================= */
+/* FOOTER CONTENT*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -694,7 +662,7 @@ img {
   box-sizing: border-box;
 }
 
-/* ================= LOGO SECTION ================= */
+/*LOGO SECTION*/
 .footer-logo-link {
   text-decoration: none;
   color: inherit;
@@ -726,7 +694,7 @@ img {
   font-size: 13px;
 }
 
-/* ================= HEADINGS ================= */
+/*HEADINGS*/
 .footer-column h3,
 .footer-column h4 {
   color: #CFA349;
@@ -755,7 +723,7 @@ img {
   color: #CFA349;
 }
 
-/* ================= CONTACT ================= */
+/*CONTACT*/
 .footer-column p {
   margin-bottom: 8px;
   line-height: 1.5;
@@ -772,7 +740,7 @@ img {
   text-decoration: underline;
 }
 
-/* ================= SOCIAL ICONS ================= */
+/*SOCIAL ICONS*/
 .footer-social {
   margin-top: 10px;
 }
@@ -788,7 +756,7 @@ img {
   color: #CFA349;
 }
 
-/* ================= FOOTER BOTTOM ================= */
+/*FOOTER BOTTOM*/
 .footer-bottom {
   text-align: center;
   padding: 15px;

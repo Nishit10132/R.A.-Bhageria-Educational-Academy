@@ -1,4 +1,4 @@
-/* RESET */
+/*RESET*/
 * {
   margin: 0;
   padding: 0;
@@ -6,51 +6,23 @@
   font-family: Arial, sans-serif;
 }
 
-.school-name h1 {
-    font-size: 22px;
-    color: #0A3A6B;
-    margin-bottom: 5px;
-}
-
-.school-name p {
-    font-size: 10px;
-    color: #0A3A6B;
-    margin: 0;
-}
-/* BODY */
 body {
-  overflow-x: hidden; 
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* TOP BAR */
-/* .top-bar {
-  background: #F4F7FC;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 20px; 
-   margin-bottom: 0;
-  padding-bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #0A3A6B;
+/*STICKY WRAPPER*/
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #ffffff;
 }
 
-.top-bar a {
-  text-decoration: none;
-  color: #0A3A6B;
-  font-weight: 600;
-  margin-right: 15px;
-} */
-
-.top-bar a:hover {
-  color: #CFA349;
-}
-
-/* HEADER */
+/*HEADER*/
 .header {
-  padding: 5px 4px; 
+  padding: 5px 4px;
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -59,8 +31,8 @@ body {
 }
 
 .header-left img {
-  height: 90px;        
-  width: auto;        
+  height: 90px;
+  width: auto;
   max-width: 100%;
   object-fit: contain;
 }
@@ -74,155 +46,143 @@ body {
 .header-center h1 {
   font-size: 40px;
   font-weight: 700;
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .header-center p {
   font-size: 22px;
   font-weight: 500;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-right a {
-  color: #0A3A6B;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.header-right a:hover {
-  color: #CFA349;
-}
-
-/* Main navbar */
+/*NAVBAR*/
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);
   padding: 4px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: background 0.3s, box-shadow 0.3s;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.main-nav.scrolled {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background: #0A3A6B;
-}
-
-/* Navbar menu */
+/* NAV LIST */
 .main-nav ul {
   display: flex;
-  flex-wrap: wrap; 
-  gap:  4px; 
-  list-style: none;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  gap: 25px;
 }
 
-/* Navbar items */
+.main-nav ul,
+.main-nav li {
+  list-style: none !important;
+}
+
+.main-nav li::marker {
+  content: none;
+}
+
+/*SUBMENU */
+.main-nav ul.submenu {
+  display: block !important;
+  flex-direction: column !important;
+}
+
+.main-nav ul.submenu li {
+  width: 100%;
+}
+
+.main-nav ul.submenu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* NAV ITEMS */
 .main-nav li {
   position: relative;
 }
 
-/* Links */
+/* NAV LINKS */
 .main-nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
   font-size: 15px;
+  font-weight: 600;
   padding: 8px 10px;
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: opacity 0.25s, color 0.25s;
+  white-space: nowrap;
 }
 
-.main-nav a:hover {
-  opacity: 0.85;
-}
-
-/* Arrow icon */
-.arrow {
-  font-size: 11px;
-  margin-left: 4px;
-}
-
-/* ===============================
-   DROPDOWN SUBMENU
-   =============================== */
+/*SUBMENU – STRICT VERTICAL*/
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
+  min-width: 220px;
   background: #ffffff;
-  padding: 5px 0;
-  min-width: 180px;
+  margin: 0;
+  padding: 0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(5px);
-  transition: all 0.3s ease;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
   z-index: 5000;
 }
 
-/* Submenu links */
-.submenu li a {
-  padding: 8px 15px;
+/* FORCE VERTICAL – NO FLEX */
+.submenu {
   display: block;
-  color: #0A3A6B;
+}
+
+/* SUBMENU LIST */
+.submenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SUBMENU LINKS – NO GAP */
+.submenu li a {
+  display: block;
+  padding: 10px 16px;
+  margin: 0;
+
   font-size: 14px;
   font-weight: 500;
+  color: #0A3A6B;
+  white-space: nowrap;
 }
 
+/* HOVER EFFECT */
 .submenu li a:hover {
   background: #F4F7FC;
-  color: #175A9F;
 }
 
-/* SUBMENU BASE (DESKTOP FIX: removed display:none) */
-/* .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  padding: 5px 0;
-  min-width: 180px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  z-index: 5000;
-} */
-
-/* FIXED HOVER RULE */
+/* SHOW SUBMENU */
 .dropdown:hover > .submenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* Hamburger menu */
+/*HAMBURGER (DESKTOP SAFE)*/
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .hamburger span {
   width: 30px;
   height: 3px;
-  background: #fff;
+  background: #ffffff;
   margin: 5px 0;
-  transition: 0.3s ease;
 }
 
 /* Fees Banner Container */
@@ -360,7 +320,7 @@ body {
   font-weight: 600;
 }
 
-/* ================= FOOTER BASE ================= */
+/*FOOTER BASE*/
 .footer {
   background: #0A3A6B;
   color: #ffffff;
@@ -369,7 +329,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ================= NEWSLETTER ================= */
+/*NEWSLETTER*/
 .footer-newsletter {
   text-align: left;
   padding: 30px 60px;
@@ -422,7 +382,7 @@ body {
   margin-top: 8px;
 }
 
-/* ================= FOOTER CONTENT ================= */
+/*FOOTER CONTENT*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -441,7 +401,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ================= LOGO SECTION ================= */
+/*LOGO SECTION*/
 .footer-logo-link {
   text-decoration: none;
   color: inherit;
@@ -473,7 +433,7 @@ body {
   font-size: 13px;
 }
 
-/* ================= HEADINGS ================= */
+/*HEADINGS*/
 .footer-column h3,
 .footer-column h4 {
   color: #CFA349;
@@ -481,7 +441,7 @@ body {
   font-size: 16px;
 }
 
-/* ================= LINKS ================= */
+/*LINKS*/
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -502,7 +462,7 @@ body {
   color: #CFA349;
 }
 
-/* ================= CONTACT ================= */
+/*CONTACT*/
 .footer-column p {
   margin-bottom: 8px;
   line-height: 1.5;
@@ -519,7 +479,7 @@ body {
   text-decoration: underline;
 }
 
-/* ================= SOCIAL ICONS ================= */
+/*SOCIAL ICONS*/
 .footer-social {
   margin-top: 10px;
 }
@@ -535,7 +495,7 @@ body {
   color: #CFA349;
 }
 
-/* ================= FOOTER BOTTOM ================= */
+/*FOOTER BOTTOM*/
 .footer-bottom {
   text-align: center;
   padding: 15px;
@@ -544,64 +504,123 @@ body {
   font-size: 13px;
 }
 
-/* =========================================
-   GLOBAL SAFETY (NO LAYOUT CHANGE)
-========================================= */
-
+/*GLOBAL SAFETY*/
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-/* =========================================
-   TABLE RESPONSIVE FIX (LIKE AGE PAGE)
-========================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+.fees-page table {
+  width: 100%;
+}
+
+/*TABLE RESPONSIVE FIX*/
 @media (max-width: 992px) {
+
+  /* HEADER */
+  .header-left img {
+    height: 80px;
+  }
+
+  .header-center h1 {
+    font-size: 28px;
+  }
+
+  .header-center p {
+    font-size: 16px;
+  }
+
+  /* NAVBAR */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0A3A6B;
+    margin-top: 10px;
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .main-nav li,
+  .main-nav a {
+    width: 100%;
+  }
+
+  /* SUBMENU – CLICK BASED */
+  .submenu {
+    position: relative;
+    background: #0A3A6B;
+    box-shadow: none;
+    border-radius: 0;
+    display: none;
+  }
+
+  .dropdown.active > .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    color: #ffffff;
+  }
+
+  .submenu li a:hover {
+    background: #175A9F;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex: 0 0 50%;
+    margin-bottom: 25px;
+  }
+}
+
+/*MOBILE TABLE SCROLL*/
+@media (max-width: 768px) {
 
   .fees-page {
     padding: 15px;
   }
 
   .fees-page table {
-    width: 100%;
-  }
-}
-
-/* =========================================
-   MOBILE TABLE SCROLL (MAIN FIX)
-========================================= */
-
-@media (max-width: 768px) {
-
-  .fees-table-wrapper {
-    width: 100%;
+    display: block;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .fees-page table {
-    width: 900px;
-    border-collapse: collapse;
+    white-space: nowrap;
   }
 
   .fees-page th,
   .fees-page td {
-    white-space: nowrap;
     font-size: 13px;
     padding: 10px;
   }
 }
 
-/* =========================================
-   HEADER SAFE FIX (NO DESIGN CHANGE)
-========================================= */
-
 @media (max-width: 768px) {
 
+  /* HEADER */
   .header {
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
+    padding: 10px;
+  }
+
+  .header-left img {
+    height: 70px;
   }
 
   .header-center h1 {
@@ -611,30 +630,21 @@ img {
   .header-center p {
     font-size: 14px;
   }
-}
 
-/* =========================================
-   BANNER SAFE FIX (NO POSITION CHANGE)
-========================================= */
-
-@media (max-width: 768px) {
-
+  /* BANNER */
   .fees-banner {
-    height: 260px;
+    height: 300px;
   }
 
-  .fees-banner .banner-content h1,
-  .fees-banner .banner-content h2 {
-    font-size: 22px;
+  .fees-banner h1 {
+    font-size: 2rem;
   }
-}
 
-/* =========================================
-   FOOTER SAFE FIX
-========================================= */
+  .fees-banner p {
+    font-size: 1rem;
+  }
 
-@media (max-width: 768px) {
-
+  /* FOOTER */
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -642,35 +652,40 @@ img {
 
   .footer-column {
     width: 100%;
-    margin-bottom: 20px;
+    padding: 15px 0;
+  }
+
+  .logo-inline {
+    justify-content: center;
   }
 }
 
-/* =========================================
-   GLOBAL SAFETY
-========================================= */
 
-body {
-  overflow-x: hidden;
-}
-
-
-/* =========================================
-   GLOBAL SAFETY
-========================================= */
-
-body {
-  overflow-x: hidden;
-}
-
-/* =========================================
-   SMALL MOBILE EXTRA SAFETY
-========================================= */
-
+/*SMALL MOBILE*/
 @media (max-width: 480px) {
 
-  .fees-page th,
-  .fees-page td {
+  .header-center h1 {
+    font-size: 18px;
+  }
+
+  .header-center p {
+    font-size: 12px;
+  }
+
+  .fees-banner {
+    height: 250px;
+  }
+
+  .fees-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .fees-banner p {
+    font-size: 0.9rem;
+  }
+
+  /* TABLE EXTRA SAFETY */
+  .fees-page table {
     font-size: 12px;
   }
 
@@ -679,18 +694,14 @@ body {
   }
 }
 
-/* =========================================
-   DESKTOP – FORCE ORIGINAL LAYOUT
-========================================= */
-
+/*DESKTOP*/
 @media (min-width: 993px) {
 
-  .fees-page table {
-    display: table;
-    width: 100%;
+  .hamburger {
+    display: none;
   }
 
-  .fees-table-wrapper {
-    overflow: visible;
+  .main-nav ul {
+    display: flex;
   }
 }
