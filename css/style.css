@@ -57,6 +57,41 @@ body {
   line-height: 1.2;
 }
 
+/* Header right section */
+.header-right{
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Login button */
+.login-header-btn{
+  background-color: #0A3A6B;      
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(10, 58, 107, 0.25);
+}
+
+/* Hover effect */
+.login-header-btn:hover{
+  background-color: #08305a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(10, 58, 107, 0.35);
+}
+
+/* Icon styling */
+.login-header-btn i{
+  font-size: 14px;
+}
+
 /*NAVBAR*/
 .main-nav {
   background: linear-gradient(to right, #CFA349, #0A3A6B);

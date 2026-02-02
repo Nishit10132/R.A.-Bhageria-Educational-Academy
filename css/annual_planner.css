@@ -233,8 +233,8 @@ body {
   transform: rotate(-45deg) translate(6px, -6px);
 } */
 
-/* Admission Form Banner Section */
-.form-banner {
+/* Annual Planner Banner Section */
+.annual-banner {
   position: relative;
   width: 100%;
   /* Height is responsive using viewport units */
@@ -244,7 +244,7 @@ body {
   color: #0A3A6B;
 }
 
-.form-banner .banner-img-wrapper {
+.annual-banner .banner-img-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -253,13 +253,13 @@ body {
   z-index: 0;
 }
 
-.form-banner .banner-img {
+.annual-banner .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures image covers container without distortion */
 }
 
-.form-banner .banner-content {
+.annual-banner .banner-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -270,175 +270,33 @@ body {
   padding: 0 20px; /* Adds breathing space on mobile */
 }
 
-.form-banner .banner-content h1 {
+.annual-banner .banner-content h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.form-banner .banner-content p {
+.annual-banner .banner-content p {
   font-size: 1.2rem;
 }
 
-/* Admission Form Section */
-.admission-form-section {
-    max-width: 1000px;
-    margin: 0 auto;
+.responsive-iframe {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 45%;   /* controls overall calendar height */
+  overflow: hidden;
 }
 
-/* .section-title {
-    color: #FF6600; 
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-} */
-
-/* Form Card */
-.form-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;          /* 🔥 MUST be 100% */
+  border: 0;
 }
 
-/* Form Title */
-.form-title {
-    text-align: center;
-    color: #0A3A6B;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* Instruction text */
-.instruction {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-/* Section titles */
-.section-title {
-    color: #0A3A6B;
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-/* Form rows */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-/* Input groups */
-.input-group {
-    flex: 1 1 250px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Full width inputs */
-.input-group.full-width {
-    flex: 1 1 100%;
-}
-
-/* Labels */
-.input-group label {
-    font-weight: bold;
-    color: #0A3A6B;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* Input, textarea, select */
-.input-group input,
-.input-group textarea,
-.input-group select {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-/* Focus style */
-.input-group input:focus,
-.input-group textarea:focus,
-.input-group select:focus {
-    border-color: #0A3A6B;
-    outline: none;
-    box-shadow: 0 0 5px rgba(10,58,107,0.3);
-}
-
-/* Gender radio box */
-.gender-box {
-    display: flex;
-    gap: 15px;
-    margin-top: 5px;
-}
-
-.gender-box label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.documents-upload {
-    max-height: 400px; /* Adjust height to show ~5 rows */
-    overflow-y: auto;
-    padding-right: 10px; /* For scrollbar space */
-}
-
-/* Scrollbar styling */
-.documents-upload::-webkit-scrollbar {
-    width: 8px;
-}
-
-.documents-upload::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.documents-upload::-webkit-scrollbar-thumb {
-    background: #0A3A6B;
-    border-radius: 4px;
-}
-
-.documents-upload::-webkit-scrollbar-thumb:hover {
-    background: #06406c;
-}
-
-/* Submit Button */
-.submit-btn {
-    background-color: #0A3A6B;
-    color: #fff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #06406c;
-}
-
-.submit-btn.submitted {
-    background-color: #28a745; 
-    cursor: default;
-}
-
-/* ================= FOOTER BASE ================= */
+/*FOOTER BASE*/
 .footer {
   background: #0A3A6B;
   color: #ffffff;
@@ -447,7 +305,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ================= NEWSLETTER ================= */
+/*NEWSLETTER*/
 .footer-newsletter {
   text-align: left;
   padding: 30px 60px;
@@ -500,7 +358,7 @@ body {
   margin-top: 8px;
 }
 
-/* ================= FOOTER CONTENT ================= */
+/*FOOTER CONTENT*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -519,7 +377,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ================= LOGO SECTION ================= */
+/*LOGO SECTION*/
 .footer-logo-link {
   text-decoration: none;
   color: inherit;
@@ -551,7 +409,7 @@ body {
   font-size: 13px;
 }
 
-/* ================= HEADINGS ================= */
+/*HEADINGS*/
 .footer-column h3,
 .footer-column h4 {
   color: #CFA349;
@@ -580,7 +438,7 @@ body {
   color: #CFA349;
 }
 
-/* ================= CONTACT ================= */
+/*CONTACT*/
 .footer-column p {
   margin-bottom: 8px;
   line-height: 1.5;
@@ -597,7 +455,7 @@ body {
   text-decoration: underline;
 }
 
-/* ================= SOCIAL ICONS ================= */
+/*SOCIAL ICONS*/
 .footer-social {
   margin-top: 10px;
 }
@@ -613,7 +471,7 @@ body {
   color: #CFA349;
 }
 
-/* ================= FOOTER BOTTOM ================= */
+/*FOOTER BOTTOM*/
 .footer-bottom {
   text-align: center;
   padding: 15px;

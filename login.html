@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>School Login</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+
+    <!-- decorative blobs (kept as before) -->
+    <div class="art" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- main card: LEFT = branding (building + logo + name), RIGHT = login form -->
+    <main class="login-card" role="main" aria-label="Login Card">
+
+        <!-- LEFT: school image + logo + name -->
+        <section class="login-left" aria-hidden="false">
+            <!-- overlay ensures text is readable on top of building image -->
+            <div class="left-overlay"></div>
+
+            <div class="left-content">
+                <!-- Put your school logo in images/school-logo.png (or change src) -->
+                <img src="images/logo.png" alt="School Logo" class="school-logo">
+
+                <!-- School name and subtitle -->
+                <h2 class="school-name">Managed by Lala Govindramjee Charitable Society, New Delhi </h2> <br>
+                <h2 class="school-name">R.A. Bhageria Educational Academy</h2>
+                <p class="school-sub">Eksal, Bharuch</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- RIGHT: login form -->
+        <section class="login-right">
+            <button class="back" onclick="history.back()" aria-label="Go back">← Back</button>
+
+            <div class="hero">
+                <h1>Welcome Back!</h1>
+                <p>Enter Your Username & Password</p>
+            </div>
+
+            <form class="login-form" onsubmit="handleLogin(event)" novalidate>
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter Your Username"
+                        class="input-underline" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter Your Password"
+                        class="input-underline" required>
+                </div>
+
+                <button type="submit" class="login-btn">LOGIN</button>
+
+                <div class="helper">
+                    Forgotten Password? <br>
+                    <a href="#">Or Create a New Account</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            // placeholder demo; replace with real auth POST
+            const u = document.getElementById('username').value.trim();
+            alert(u ? ('Logging in as: ' + u) : 'Please enter username');
+        }
+    </script>
+</body>
+
+</html>
