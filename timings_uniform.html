@@ -135,6 +135,9 @@
   </div> -->
     </section>
 
+     <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <!-- School Timings & Uniform section -->
     <div class="school-info-page">
         <h1>School Timings</h1>
@@ -389,6 +392,25 @@
                 });
             });
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 </html>

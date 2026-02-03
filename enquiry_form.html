@@ -133,6 +133,10 @@
     <p>"Begin your child's learning journey with a seamless and transparent admission process."</p>
   </div> -->
     </section>
+
+     <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <section class="inquiry-form-section">
         <div class="container">
             <h2>STUDENT DETAILS</h2>
@@ -456,6 +460,25 @@
             });
 
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 

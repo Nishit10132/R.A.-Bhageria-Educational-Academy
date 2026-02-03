@@ -133,6 +133,9 @@
   </div>
 </section>
 
+ <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <!-- Book section -->
 <div class="book-section">
     <div class="container">
@@ -263,7 +266,6 @@
                 </a>
             </div>
 
-
             <!-- Column 2 -->
             <div class="footer-column">
                 <h4>About Us</h4>
@@ -313,7 +315,25 @@
         </div>
 
     </footer>
-    <script src="rules_regulations.js"></script>
+    <script src="rules_regulations.js">
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+    </script>
 </body>
 
 </html>

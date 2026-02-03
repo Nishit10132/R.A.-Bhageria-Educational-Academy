@@ -133,6 +133,9 @@
         </div>
     </section>
 
+     <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+<br>
     <section class="withdrawal-procedure">
         <div class="container">
             <h1>Withdrawal Procedure</h1>
@@ -186,7 +189,7 @@
                                 </div>
                             </div>
     </section>
-
+<br>
     <!-- FOOTER -->
     <footer class="footer">
 
@@ -304,6 +307,25 @@
                 });
             });
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
     </script>
 </body>
 

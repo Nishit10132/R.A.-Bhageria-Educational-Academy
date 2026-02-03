@@ -41,7 +41,7 @@
                 <h1>R.A. Bhageria Educational Academy</h1>
                 <p>Eksal, Bharuch</p>
             </div>
-             <div class="header-right">
+            <div class="header-right">
                 <a href="login.html" class="login-header-btn">
                     <i class="fa fa-sign-in"></i> Login
                 </a>
@@ -93,7 +93,8 @@
                         <li><a href="admission_form.html"><i class="fa fa-file-text"></i> Admission Form</a></li>
                         <li><a href="age_criteria.html"><i class="fa fa-child"></i> Age Criteria</a></li>
                         <li><a href="fees_structure.html"><i class="fa fa-inr"></i> Fees Structure</a></li>
-                        <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a></li>
+                        <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal
+                                Procedure</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -124,16 +125,19 @@
         </nav>
     </div>
 
-     <!-- Infrastructure banner -->
-   <section class="infra-banner">
-  <div class="banner-img-wrapper">
-    <img src="images/infrastructure_banner.jpg" alt="Timings Banner" class="banner-img" />
-  </div>
-  <!-- <div class="banner-content">
+    <!-- Infrastructure banner -->
+    <section class="infra-banner">
+        <div class="banner-img-wrapper">
+            <img src="images/infrastructure_banner.jpg" alt="Timings Banner" class="banner-img" />
+        </div>
+        <!-- <div class="banner-content">
     <h1>Take the First Step Towards Learning</h1>
     <p>"Begin your child's learning journey with a seamless and transparent admission process."</p>
   </div> -->
-</section>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"></button>
 
     <!-- Infrastructure section -->
     <section class="infrastructure-section">
@@ -284,10 +288,10 @@
                 <p>Eksal, Bharuch, Gujarat, India - 392130</p>
                 <p><a href="tel:+911234567890" class="footer-link"> +91 6358159567</a>
                 <p>
-        <a href="mailto:info@example.com" class="footer-link">
-            rabhageria.education@gmail.com
-        </a>
-    </p>
+                    <a href="mailto:info@example.com" class="footer-link">
+                        rabhageria.education@gmail.com
+                    </a>
+                </p>
 
                 <div class="footer-social">
                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -344,6 +348,25 @@
             });
 
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 

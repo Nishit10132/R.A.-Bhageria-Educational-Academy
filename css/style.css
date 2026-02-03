@@ -22,7 +22,7 @@ body {
 
 /*HEADER*/
 .header {
-  padding: 3px 4px;
+  padding: 5px 4px;
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@ body {
 }
 
 .header-left img {
-  height: 60px;
+  height: 90px;
   /* width: auto; */
   max-width: 100%;
   object-fit: contain;
@@ -44,16 +44,16 @@ body {
 }
 
 .header-center h1 {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 2px 0;
+  margin: 4px 0;
   line-height: 1.2;
 }
 
 .header-center p {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
-  margin: 0;
+  margin: 2px 0;
   line-height: 1.2;
 }
 
@@ -254,6 +254,39 @@ body {
     position: absolute;
     inset: 0;
     /* background: rgba(10, 58, 107, 0.35); */
+}
+
+/* Back to Top Scroll Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF9800;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+#backToTop::after {
+  content: "↑";
+  font-size: 24px;
+  color: #fff;
+  line-height: 50px;
+}
+
+#backToTop:hover {
+  background-color: #333;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-content {
@@ -490,22 +523,20 @@ img {
 
 .faq-item {
   border-bottom: 1px solid #ddd;
-  margin-bottom: 15px;
 }
 
 .faq-question {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: none;
   border: none;
+  padding: 15px;
   font-size: 18px;
   font-weight: 600;
   color: #0A3A6B;
-  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .faq-question:hover {
@@ -513,19 +544,34 @@ img {
 }
 
 .faq-answer {
-  display: none;
-  padding: 0 15px 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.faq-answer p {
+  padding: 15px 0;
   font-size: 16px;
   color: #333;
   line-height: 1.6;
 }
 
+/* Active state */
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
 .icon {
   font-size: 22px;
-  font-weight: bold;
   color: #CFA349;
   transition: transform 0.3s;
 }
+
+.faq-item.active .icon {
+  transform: rotate(45deg); /* + becomes × */
+}
+
 
 /* CONTACT FORM */
 .contact-form {

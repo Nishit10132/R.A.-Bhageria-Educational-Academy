@@ -257,17 +257,38 @@ body {
   object-fit: cover;
 }
 
-/* Reset and base styles
-* {
-  box-sizing: border-box;
+/* Back to Top Scroll Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF9800;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.3s;
+  z-index: 1000;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f9fa;
-  margin: 0;
-  padding: 40px 20px;
-} */
+#backToTop::after {
+  content: "↑";
+  font-size: 24px;
+  color: #fff;
+  line-height: 50px;
+}
+
+#backToTop:hover {
+  background-color: #333;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 .container {
   max-width: 900px;

@@ -126,6 +126,9 @@
     <p>Guiding the academy with vision, dedication, and leadership</p>
 </section> -->
 
+ <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <!-- TRUSTEES GRID -->
     <section class="trustees-section">
 
@@ -289,6 +292,25 @@
                 });
             });
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 </html>

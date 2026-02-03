@@ -55,40 +55,7 @@ body {
   margin: 2px 0;
 }
 
-/* Header right section */
-.header-right{
-  margin-right: 12px;
-  display: flex;
-  align-items: center;
-}
 
-/* Login button */
-.login-header-btn{
-  background-color: #0A3A6B;      
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.25s ease;
-  box-shadow: 0 3px 8px rgba(10, 58, 107, 0.25);
-}
-
-/* Hover effect */
-.login-header-btn:hover{
-  background-color: #08305a;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(10, 58, 107, 0.35);
-}
-
-/* Icon styling */
-.login-header-btn i{
-  font-size: 14px;
-}
 
 /*NAVBAR*/
 .main-nav {
@@ -104,7 +71,38 @@ body {
   align-items: center;
   gap: 25px;
 }
+/* Back to Top Scroll Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF9800;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.3s;
+  z-index: 1000;
+}
 
+#backToTop::after {
+  content: "↑";
+  font-size: 24px;
+  color: #fff;
+  line-height: 50px;
+}
+
+#backToTop:hover {
+  background-color: #333;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
 .main-nav ul,
 .main-nav li {
   list-style: none !important;

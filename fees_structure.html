@@ -132,6 +132,9 @@
         </div>
     </section>
 
+     <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <!--  Fess Structure Table -->
     <div class="fees-page">
         <div class="fees-table-wrapper">
@@ -377,6 +380,25 @@
             });
 
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 

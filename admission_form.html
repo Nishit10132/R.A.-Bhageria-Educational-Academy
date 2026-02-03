@@ -131,6 +131,10 @@
             <img src="images/form_banner.jpg" alt="Admission Form Banner" class="banner-img" />
         </div>
     </section>
+<br>
+    <!-- Back to Top Button -->
+    <button id="backToTop"></button>
+
     <section class="admission-form-section">
         <div class="form-card">
             <h2 class="form-title">Admission Form</h2>
@@ -393,10 +397,10 @@
                 <div class="row">
                     <button type="submit" class="submit-btn">Submit Admission Form</button>
                 </div>
-
             </form>
         </div>
     </section>
+    <br>
     <footer class="footer">
 
         <!-- Newsletter -->
@@ -517,6 +521,24 @@
             });
 
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
     </script>
 </body>
 

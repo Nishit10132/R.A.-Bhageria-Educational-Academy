@@ -28,7 +28,7 @@
                 <h1>R.A. Bhageria Educational Academy</h1>
                 <p>Eksal, Bharuch</p>
             </div>
-             <div class="header-right">
+            <div class="header-right">
                 <a href="login.html" class="login-header-btn">
                     <i class="fa fa-sign-in"></i> Login
                 </a>
@@ -80,7 +80,8 @@
                         <li><a href="admission_form.html"><i class="fa fa-file-text"></i> Admission Form</a></li>
                         <li><a href="age_criteria.html"><i class="fa fa-child"></i> Age Criteria</a></li>
                         <li><a href="fees_structure.html"><i class="fa fa-inr"></i> Fees Structure</a></li>
-                        <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal Procedure</a></li>
+                        <li><a href="withdrawal_procedure.html"><i class="fa fa-times-circle"></i> Withdrawal
+                                Procedure</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -112,18 +113,21 @@
     </div>
 
     <!-- Objectives Banner -->
-<section class="objectives-banner">
-  <img src="images/objectives_banner.jpg" alt="Objectives Banner" class="banner-img">
-  <div class="banner-content">
-    <!-- <h1>Our Educational Objectives</h1>
+    <section class="objectives-banner">
+        <img src="images/objectives_banner.jpg" alt="Objectives Banner" class="banner-img">
+        <div class="banner-content">
+            <!-- <h1>Our Educational Objectives</h1>
     <p>Empowering students with knowledge, values, and skills for lifelong success and responsible citizenship.</p> -->
-  </div>
-</section>
+        </div>
+    </section>
 
     <!-- HERO SECTION
 <div class="objectives-hero">
     <h1>Objectives</h1>
 </div> -->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"></button>
 
     <!-- OBJECTIVES SECTION -->
     <div class="objectives-section">
@@ -224,10 +228,10 @@
                 <p>Eksal, Bharuch, Gujarat, India - 392130</p>
                 <p><a href="tel:+911234567890" class="footer-link"> +91 6358159567</a>
                 <p>
-        <a href="mailto:info@example.com" class="footer-link">
-            rabhageria.education@gmail.com
-        </a>
-    </p>
+                    <a href="mailto:info@example.com" class="footer-link">
+                        rabhageria.education@gmail.com
+                    </a>
+                </p>
 
                 <div class="footer-social">
                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -242,7 +246,7 @@
             <p>© 2025 R.A. Bhageria Educational Academy. All Rights Reserved.</p>
         </div>
     </footer>
-<script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
 
             const hamburger = document.getElementById("hamburger");
@@ -279,6 +283,25 @@
             });
 
         });
+
+        <!-- Back to Top Button Scroll  -->
+         const btn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
     </script>
 </body>
 
