@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 /* ========== STICKY WRAPPER ========== */
@@ -95,11 +95,7 @@ body {
     transform: translateY(-2px);
 }
 
-.login-btn i {
-    font-size: 14px;
-}
-
-/* ========== NAVBAR (NO DROPDOWN ARROWS) ========== */
+/* ========== NAVBAR ========== */
 .main-nav {
     background: linear-gradient(135deg, #CFA349, #0A3A6B);
     position: relative;
@@ -144,10 +140,6 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.main-nav .nav-menu li a:hover i {
-    transform: scale(1.1);
-}
-
 /* ========== DROPDOWN MENU ========== */
 .main-nav .nav-menu li .submenu {
     position: absolute;
@@ -177,25 +169,12 @@ body {
     padding: 10px 18px;
     display: block;
     font-size: 13px;
-    transition: all 0.3s ease;
-}
-
-.main-nav .nav-menu li .submenu li a i {
-    margin-right: 10px;
-    font-size: 12px;
-    color: #CFA349;
-    width: 20px;
-    text-align: center;
 }
 
 .main-nav .nav-menu li .submenu li a:hover {
     background: #f5f5f5;
     color: #CFA349;
     padding-left: 24px;
-}
-
-.main-nav .nav-menu li .submenu li a:hover i {
-    transform: scale(1.1);
 }
 
 /* ========== HAMBURGER MENU ========== */
@@ -205,9 +184,7 @@ body {
     cursor: pointer;
     padding: 15px;
     margin-left: auto;
-    position: relative;
     z-index: 1001;
-    transition: all 0.3s ease;
 }
 
 .hamburger span {
@@ -232,29 +209,6 @@ body {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* ========== ADMISSION BANNER (ORIGINAL) ========== */
-.admission-banner {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.admission-banner .banner-img-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.admission-banner .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /* ========== BACK TO TOP BUTTON ========== */
 #backToTop {
     position: fixed;
@@ -268,7 +222,7 @@ body {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s, background 0.3s;
+    transition: all 0.3s;
     z-index: 1000;
 }
 
@@ -277,6 +231,10 @@ body {
     font-size: 24px;
     color: #fff;
     line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 #backToTop:hover {
@@ -288,117 +246,155 @@ body {
     visibility: visible;
 }
 
-/* ========== ADMISSION SECTION ========== */
-.admission-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background-color: #fdfdfd;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    color: #0A3A6B;
-    line-height: 1.7;
+/* ========== TERMS PAGE ========== */
+.terms-page {
+    background: #f7f9fc;
+    padding: 60px 20px;
 }
 
-.admission-section .main-heading {
-    font-size: 32px;
-    font-weight: 700;
-    color: #CFA349;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-title {
     text-align: center;
-    margin-bottom: 20px;
-    position: relative;
+    font-size: 42px;
+    font-weight: 700;
+    color: #0A3A6B;
+    margin-bottom: 10px;
 }
 
-.admission-section .main-heading::after {
+.page-title span {
+    color: #CFA349;
+}
+
+.page-title::after {
     content: "";
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #0A3A6B;
-    margin: 10px auto 0;
+    background: linear-gradient(to right, #CFA349, #0A3A6B);
+    margin: 15px auto 0;
     border-radius: 2px;
 }
 
-.admission-section .sub-heading {
-    font-size: 22px;
-    font-weight: 600;
-    color: #175A9F;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-left: 4px solid #CFA349;
-    padding-left: 10px;
-}
-
-.admission-section p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.admission-section ul.list {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-
-.admission-section ul.list li {
-    margin-bottom: 12px;
-    font-size: 16px;
-    padding-left: 28px;
-    position: relative;
-    color: #333;
-}
-
-.admission-section ul.list li::before {
-    content: "✓";
-    color: #CFA349;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.admission-section strong {
-    color: #CFA349;
-    font-weight: 600;
-}
-
-/* ========== CALL TO ACTION BUTTON ========== */
-.admission-cta {
+.last-updated {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 40px;
 }
 
-.apply-now-btn {
-    display: inline-flex;
+/* Terms Content */
+.terms-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Individual Section */
+.terms-section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Section Headers with Icons */
+.terms-section h2 {
+    font-size: 22px;
+    color: #0A3A6B;
+    margin-bottom: 15px;
+    display: flex;
     align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #CFA349, #0A3A6B);
-    color: #ffffff;
-    padding: 12px 32px;
-    font-size: 16px;
+    gap: 12px;
     font-weight: 600;
+}
+
+.terms-section h2 i {
+    color: #CFA349;
+    font-size: 24px;
+    width: 32px;
+    text-align: center;
+}
+
+/* Section Paragraphs */
+.terms-section p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-left: 44px;
+}
+
+/* Declaration */
+.terms-declaration {
+    background: linear-gradient(135deg, #f8fafd, #fff);
+    padding: 30px;
+    border-radius: 16px;
+    margin: 30px 0 25px;
+    text-align: center;
+    border-left: 4px solid #CFA349;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.terms-declaration i {
+    font-size: 48px;
+    color: #CFA349;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.terms-declaration p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.terms-contact {
+    margin-top: 30px;
+    text-align: center;
+    padding: 25px;
+    background: #fff8e7;
+    border-radius: 16px;
+}
+
+.terms-contact h3 {
+    font-size: 18px;
+    color: #0A3A6B;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.terms-contact h3 i {
+    color: #CFA349;
+    margin-right: 8px;
+}
+
+.terms-contact p {
+    font-size: 14px;
+    color: #666;
+}
+
+.terms-contact a {
+    color: #CFA349;
     text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.apply-now-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #e2b95c, #175A9F);
-}
-
-.apply-now-btn i {
-    transition: transform 0.3s ease;
-}
-
-.apply-now-btn:hover i {
-    transform: translateX(5px);
+.terms-contact a:hover {
+    color: #0A3A6B;
+    text-decoration: underline;
 }
 
 /* ========== FOOTER ========== */
@@ -656,7 +652,7 @@ body {
     .hamburger {
         display: flex;
     }
-    
+
     .main-nav .nav-menu {
         display: none;
         flex-direction: column;
@@ -668,51 +664,64 @@ body {
         z-index: 1000;
         padding: 10px 0;
     }
-    
+
     .main-nav .nav-menu.active {
         display: flex;
     }
-    
+
     .main-nav .nav-menu li {
         width: 100%;
     }
-    
+
     .main-nav .nav-menu li a {
         width: 100%;
         padding: 12px 20px;
     }
-    
-    /* Mobile Dropdown */
+
     .main-nav .nav-menu li .submenu {
         position: relative;
-        top: 0;
-        left: 0;
         background: #175A9F;
-        box-shadow: none;
-        border-radius: 0;
         display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
         padding-left: 20px;
     }
-    
-    .dropdown.active > .submenu {
+
+    .dropdown.active>.submenu {
         display: block;
     }
-    
+
     .main-nav .nav-menu li .submenu li a {
         color: #fff;
-        padding: 10px 20px;
     }
-    
-    .main-nav .nav-menu li .submenu li a:hover {
-        background: #1e6bb5;
-        padding-left: 25px;
+
+    .terms-content {
+        padding: 30px;
     }
-    
+
+    .terms-section h2 {
+        font-size: 20px;
+    }
+
+    .terms-section p {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .terms-section h2 i {
+        width: 28px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .footer-column h4::after {
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
 
@@ -721,75 +730,68 @@ body {
     .header {
         flex-direction: column;
         text-align: center;
-        padding: 15px;
     }
-    
+
     .header-left img {
         height: 60px;
     }
-    
+
     .header-center h1 {
         font-size: 22px;
     }
-    
-    .header-center p {
-        font-size: 12px;
+
+    .page-title {
+        font-size: 32px;
     }
-    
-    .admission-banner {
-        height: 35vh;
-    }
-    
-    .admission-section {
-        margin: 30px 20px;
+
+    .terms-content {
         padding: 25px;
     }
-    
-    .admission-section .main-heading {
-        font-size: 28px;
+
+    .terms-section h2 {
+        font-size: 18px;
+        flex-wrap: wrap;
     }
-    
-    .admission-section .sub-heading {
-        font-size: 20px;
+
+    .terms-section p {
+        font-size: 13px;
     }
-    
+
+    .terms-declaration {
+        padding: 20px;
+    }
+
+    .terms-declaration i {
+        font-size: 36px;
+    }
+
+    .terms-declaration p {
+        font-size: 13px;
+    }
+
     .footer-top {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-logo-area {
         justify-content: center;
         text-align: center;
     }
-    
+
     .footer-newsletter {
         text-align: center;
     }
-    
+
     .footer-newsletter .newsletter-form {
         justify-content: center;
     }
-    
-    .footer-main {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-column h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .footer-social {
-        justify-content: center;
-    }
-    
+
     .footer-bottom-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .policy-links {
         justify-content: center;
     }
@@ -797,55 +799,40 @@ body {
 
 /* Small Mobile (≤ 480px) */
 @media (max-width: 480px) {
-    .header-center h1 {
-        font-size: 18px;
+    .page-title {
+        font-size: 28px;
     }
-    
-    .admission-banner {
-        height: 30vh;
-    }
-    
-    .admission-section {
-        margin: 20px 15px;
+
+    .terms-content {
         padding: 20px;
     }
-    
-    .admission-section .main-heading {
-        font-size: 24px;
-    }
-    
-    .admission-section .sub-heading {
-        font-size: 18px;
-    }
-    
-    .admission-section p,
-    .admission-section ul.list li {
-        font-size: 14px;
-    }
-    
-    .apply-now-btn {
-        padding: 10px 24px;
-        font-size: 14px;
-    }
-    
-    .footer-logo {
-        height: 50px;
-    }
-    
-    .footer-school-info h3 {
+
+    .terms-section h2 {
         font-size: 16px;
     }
-    
+
+    .terms-section p {
+        font-size: 12px;
+    }
+
+    .terms-contact h3 {
+        font-size: 16px;
+    }
+
+    .terms-contact p {
+        font-size: 12px;
+    }
+
     #backToTop {
+        width: 40px;
+        height: 40px;
         bottom: 20px;
         right: 20px;
-        width: 45px;
-        height: 45px;
     }
-    
+
     #backToTop::after {
-        line-height: 45px;
-        font-size: 20px;
+        line-height: 40px;
+        font-size: 18px;
     }
 }
 
