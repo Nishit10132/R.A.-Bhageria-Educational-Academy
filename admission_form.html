@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admission Form - R.A. Bhageria Educational Academy</title>
+    <title>Admission Form | R.A. Bhageria Educational Academy, Eksal, Bharuch</title>
+    <meta name="description"
+        content="Apply for admission at R.A. Bhageria Educational Academy, Eksal, Bharuch. Download or complete the online admission form, upload required documents, and begin your child's admission process.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="R.A. Bhageria Educational Academy">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#0A3A6B">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/admission_form.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="images/logo.png" alt="R.A. Bhageria Educational Academy School Logo"/>
 </head>
 
 <body>
@@ -22,7 +28,7 @@
         <header class="header">
             <div class="header-left">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="School Logo" class="school-logo">
+                    <img src="images/logo.png" alt="R.A. Bhageria Educational Academy School Logo" class="school-logo">
                 </a>
             </div>
             <div class="header-center">
@@ -75,11 +81,13 @@
                 <li class="dropdown">
                     <a href="#"><i class="fas fa-address-card"></i> Admission</a>
                     <ul class="submenu">
-                        <li><a href="admission_procedure.html"><i class="fas fa-info-circle"></i> Admission Procedure</a></li>
+                        <li><a href="admission_procedure.html"><i class="fas fa-info-circle"></i> Admission
+                                Procedure</a></li>
                         <li><a href="admission_form.html"><i class="fas fa-file-alt"></i> Admission Form</a></li>
                         <li><a href="age_criteria.html"><i class="fas fa-child"></i> Age Criteria</a></li>
                         <li><a href="fees_structure.html"><i class="fas fa-rupee-sign"></i> Fees Structure</a></li>
-                        <li><a href="withdrawal_procedure.html"><i class="fas fa-times-circle"></i> Withdrawal Procedure</a></li>
+                        <li><a href="withdrawal_procedure.html"><i class="fas fa-times-circle"></i> Withdrawal
+                                Procedure</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -124,38 +132,53 @@
     <section class="admission-form-section">
         <div class="form-card">
             <h2 class="form-title">Admission Form</h2>
-            <p class="instruction"><i class="fas fa-circle-info"></i> To be filled by the Parent / Guardian in CAPITAL LETTERS</p>
-            
+            <p class="instruction"><i class="fas fa-circle-info"></i> To be filled by the Parent / Guardian in CAPITAL
+                LETTERS</p>
+
             <form id="admissionForm" enctype="multipart/form-data">
 
                 <!-- FORM DETAILS -->
                 <h3 class="section-title">Form Details</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-file-alt"></i> Form No *</label><input type="text" name="formNo" required></div>
-                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Date *</label><input type="date" name="formDate" required></div>
-                    <div class="input-group"><label><i class="fas fa-school"></i> Academic Year *</label><input type="text" name="academicYear" required></div>
+                    <div class="input-group"><label><i class="fas fa-file-alt"></i> Form No *</label><input type="text"
+                            name="formNo" required></div>
+                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Date *</label><input type="date"
+                            name="formDate" required></div>
+                    <div class="input-group"><label><i class="fas fa-school"></i> Academic Year *</label><input
+                            type="text" name="academicYear" required></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-calendar-check"></i> Admission Date *</label><input type="date" name="admissionDate" required></div>
-                    <div class="input-group"><label><i class="fas fa-id-card"></i> Child's Aadhaar No *</label><input type="text" name="childAadhaar" required></div>
-                    <div class="input-group"><label><i class="fas fa-hashtag"></i> G.R. No</label><input type="text" name="grNo"></div>
+                    <div class="input-group"><label><i class="fas fa-calendar-check"></i> Admission Date *</label><input
+                            type="date" name="admissionDate" required></div>
+                    <div class="input-group"><label><i class="fas fa-id-card"></i> Child's Aadhaar No *</label><input
+                            type="text" name="childAadhaar" required></div>
+                    <div class="input-group"><label><i class="fas fa-hashtag"></i> G.R. No</label><input type="text"
+                            name="grNo"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-hashtag"></i> U-DISE No</label><input type="text" name="udiseNo"></div>
-                    <div class="input-group"><label><i class="fas fa-layer-group"></i> Class For *</label><input type="text" name="classFor" required></div>
-                    <div class="input-group"><label><i class="fas fa-id-badge"></i> APAAR ID / PEN</label><input type="text" name="apaarId"></div>
+                    <div class="input-group"><label><i class="fas fa-hashtag"></i> U-DISE No</label><input type="text"
+                            name="udiseNo"></div>
+                    <div class="input-group"><label><i class="fas fa-layer-group"></i> Class For *</label><input
+                            type="text" name="classFor" required></div>
+                    <div class="input-group"><label><i class="fas fa-id-badge"></i> APAAR ID / PEN</label><input
+                            type="text" name="apaarId"></div>
                 </div>
 
                 <!-- STUDENT INFORMATION -->
                 <h3 class="section-title">Student Information</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-user"></i> Student Full Name *</label><input type="text" name="studentName" required></div>
-                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Father's Name *</label><input type="text" name="fatherName" required></div>
-                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Mother's Name *</label><input type="text" name="motherName" required></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Student Full Name *</label><input
+                            type="text" name="studentName" required></div>
+                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Father's Name *</label><input
+                            type="text" name="fatherName" required></div>
+                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Mother's Name *</label><input
+                            type="text" name="motherName" required></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Date of Birth *</label><input type="date" name="dob" required></div>
-                    <div class="input-group"><label><i class="fas fa-map-marker-alt"></i> Birth Place *</label><input type="text" name="birthPlace" required></div>
+                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Date of Birth *</label><input
+                            type="date" name="dob" required></div>
+                    <div class="input-group"><label><i class="fas fa-map-marker-alt"></i> Birth Place *</label><input
+                            type="text" name="birthPlace" required></div>
                     <div class="input-group">
                         <label>Gender *</label>
                         <div class="gender-box">
@@ -167,142 +190,213 @@
 
                 <!-- ADDRESS -->
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-home"></i> Address *</label><textarea name="address" rows="2" required></textarea></div>
+                    <div class="input-group full-width"><label><i class="fas fa-home"></i> Address *</label><textarea
+                            name="address" rows="2" required></textarea></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-city"></i> City *</label><input type="text" name="city" required></div>
-                    <div class="input-group"><label><i class="fas fa-map"></i> State *</label><input type="text" name="state" required></div>
-                    <div class="input-group"><label><i class="fas fa-location-dot"></i> Taluka</label><input type="text" name="taluka"></div>
+                    <div class="input-group"><label><i class="fas fa-city"></i> City *</label><input type="text"
+                            name="city" required></div>
+                    <div class="input-group"><label><i class="fas fa-map"></i> State *</label><input type="text"
+                            name="state" required></div>
+                    <div class="input-group"><label><i class="fas fa-location-dot"></i> Taluka</label><input type="text"
+                            name="taluka"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-hashtag"></i> Pin Code *</label><input type="text" name="pin" required></div>
-                    <div class="input-group"><label><i class="fas fa-flag"></i> Nationality *</label><input type="text" name="nationality" required></div>
+                    <div class="input-group"><label><i class="fas fa-hashtag"></i> Pin Code *</label><input type="text"
+                            name="pin" required></div>
+                    <div class="input-group"><label><i class="fas fa-flag"></i> Nationality *</label><input type="text"
+                            name="nationality" required></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-user-clock"></i> Age *</label><input type="number" name="age" required></div>
-                    <div class="input-group"><label><i class="fas fa-language"></i> Mother Tongue</label><input type="text" name="motherTongue"></div>
-                    <div class="input-group"><label><i class="fas fa-om"></i> Religion</label><input type="text" name="religion"></div>
+                    <div class="input-group"><label><i class="fas fa-user-clock"></i> Age *</label><input type="number"
+                            name="age" required></div>
+                    <div class="input-group"><label><i class="fas fa-language"></i> Mother Tongue</label><input
+                            type="text" name="motherTongue"></div>
+                    <div class="input-group"><label><i class="fas fa-om"></i> Religion</label><input type="text"
+                            name="religion"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-users"></i> Caste</label><input type="text" name="caste"></div>
-                    <div class="input-group"><label><i class="fas fa-layer-group"></i> Category</label><input type="text" name="category"></div>
+                    <div class="input-group"><label><i class="fas fa-users"></i> Caste</label><input type="text"
+                            name="caste"></div>
+                    <div class="input-group"><label><i class="fas fa-layer-group"></i> Category</label><input
+                            type="text" name="category"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-phone"></i> Phone No. *</label><input type="tel" name="phone" required></div>
-                    <div class="input-group"><label><i class="fas fa-envelope"></i> Email Id</label><input type="email" name="email"></div>
+                    <div class="input-group"><label><i class="fas fa-phone"></i> Phone No. *</label><input type="tel"
+                            name="phone" required></div>
+                    <div class="input-group"><label><i class="fas fa-envelope"></i> Email Id</label><input type="email"
+                            name="email"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-user-check"></i> Staff Child (Yes/No)</label><input type="text" name="staffChild"></div>
-                    <div class="input-group"><label><i class="fas fa-building-user"></i> If Yes, Name & Department</label><input type="text" name="staffChildDetails"></div>
+                    <div class="input-group"><label><i class="fas fa-user-check"></i> Staff Child (Yes/No)</label><input
+                            type="text" name="staffChild"></div>
+                    <div class="input-group"><label><i class="fas fa-building-user"></i> If Yes, Name &
+                            Department</label><input type="text" name="staffChildDetails"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-palette"></i> Hobbies</label><input type="text" name="hobbies"></div>
-                    <div class="input-group"><label><i class="fas fa-bus"></i> Transportation Required (Yes/No)</label><input type="text" name="transport"></div>
+                    <div class="input-group"><label><i class="fas fa-palette"></i> Hobbies</label><input type="text"
+                            name="hobbies"></div>
+                    <div class="input-group"><label><i class="fas fa-bus"></i> Transportation Required
+                            (Yes/No)</label><input type="text" name="transport"></div>
                 </div>
 
                 <!-- SIBLING INFORMATION -->
                 <h3 class="section-title">Sibling Information</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-users"></i> No. of Siblings</label><input type="number" name="siblingsCount"></div>
-                    <div class="input-group"><label><i class="fas fa-user"></i> Sibling's Name</label><input type="text" name="siblingName"></div>
-                    <div class="input-group"><label><i class="fas fa-school"></i> Sibling's School</label><input type="text" name="siblingSchool"></div>
+                    <div class="input-group"><label><i class="fas fa-users"></i> No. of Siblings</label><input
+                            type="number" name="siblingsCount"></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Sibling's Name</label><input type="text"
+                            name="siblingName"></div>
+                    <div class="input-group"><label><i class="fas fa-school"></i> Sibling's School</label><input
+                            type="text" name="siblingSchool"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Sibling's Class</label><input type="text" name="siblingClass"></div>
-                    <div class="input-group"><label><i class="fas fa-heart"></i> Relation</label><input type="text" name="siblingRelation"></div>
-                    <div class="input-group"><label><i class="fas fa-user-clock"></i> Sibling's Age</label><input type="number" name="siblingAge"></div>
+                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Sibling's Class</label><input
+                            type="text" name="siblingClass"></div>
+                    <div class="input-group"><label><i class="fas fa-heart"></i> Relation</label><input type="text"
+                            name="siblingRelation"></div>
+                    <div class="input-group"><label><i class="fas fa-user-clock"></i> Sibling's Age</label><input
+                            type="number" name="siblingAge"></div>
                 </div>
 
                 <!-- MEDICAL INFORMATION -->
                 <h3 class="section-title">Medical Information</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-notes-medical"></i> Any Medical Conditions/Allergies? (Yes/No)</label><input type="text" name="medicalCondition"></div>
-                    <div class="input-group"><label><i class="fas fa-file-medical"></i> If Yes, Medical Details</label><input type="text" name="medicalDetails"></div>
+                    <div class="input-group"><label><i class="fas fa-notes-medical"></i> Any Medical
+                            Conditions/Allergies? (Yes/No)</label><input type="text" name="medicalCondition"></div>
+                    <div class="input-group"><label><i class="fas fa-file-medical"></i> If Yes, Medical
+                            Details</label><input type="text" name="medicalDetails"></div>
                 </div>
 
                 <!-- PARENT INFORMATION -->
                 <h3 class="section-title">Parent Information</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Father's Name *</label><input type="text" name="fatherNameParent" required></div>
-                    <div class="input-group"><label><i class="fas fa-user"></i> Mother's Name *</label><input type="text" name="motherNameParent" required></div>
+                    <div class="input-group"><label><i class="fas fa-user-tie"></i> Father's Name *</label><input
+                            type="text" name="fatherNameParent" required></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Mother's Name *</label><input
+                            type="text" name="motherNameParent" required></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Father's Date of Birth</label><input type="date" name="fatherDOB"></div>
-                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Mother's Date of Birth</label><input type="date" name="motherDOB"></div>
+                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Father's Date of
+                            Birth</label><input type="date" name="fatherDOB"></div>
+                    <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Mother's Date of
+                            Birth</label><input type="date" name="motherDOB"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Father's Qualification</label><input type="text" name="fatherQualification"></div>
-                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Mother's Qualification</label><input type="text" name="motherQualification"></div>
+                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Father's
+                            Qualification</label><input type="text" name="fatherQualification"></div>
+                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Mother's
+                            Qualification</label><input type="text" name="motherQualification"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-briefcase"></i> Father's Occupation</label><input type="text" name="fatherOccupation"></div>
-                    <div class="input-group"><label><i class="fas fa-briefcase"></i> Mother's Occupation</label><input type="text" name="motherOccupation"></div>
+                    <div class="input-group"><label><i class="fas fa-briefcase"></i> Father's Occupation</label><input
+                            type="text" name="fatherOccupation"></div>
+                    <div class="input-group"><label><i class="fas fa-briefcase"></i> Mother's Occupation</label><input
+                            type="text" name="motherOccupation"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-id-badge"></i> Father's Designation</label><input type="text" name="fatherDesignation"></div>
-                    <div class="input-group"><label><i class="fas fa-id-badge"></i> Mother's Designation</label><input type="text" name="motherDesignation"></div>
+                    <div class="input-group"><label><i class="fas fa-id-badge"></i> Father's Designation</label><input
+                            type="text" name="fatherDesignation"></div>
+                    <div class="input-group"><label><i class="fas fa-id-badge"></i> Mother's Designation</label><input
+                            type="text" name="motherDesignation"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-building"></i> Father's Office Address</label><input type="text" name="fatherOffice"></div>
+                    <div class="input-group full-width"><label><i class="fas fa-building"></i> Father's Office
+                            Address</label><input type="text" name="fatherOffice"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-building"></i> Mother's Office Address</label><input type="text" name="motherOffice"></div>
+                    <div class="input-group full-width"><label><i class="fas fa-building"></i> Mother's Office
+                            Address</label><input type="text" name="motherOffice"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-phone"></i> Father's Phone No *</label><input type="tel" name="fatherPhoneParent" required></div>
-                    <div class="input-group"><label><i class="fas fa-phone"></i> Mother's Phone No</label><input type="tel" name="motherPhoneParent"></div>
+                    <div class="input-group"><label><i class="fas fa-phone"></i> Father's Phone No *</label><input
+                            type="tel" name="fatherPhoneParent" required></div>
+                    <div class="input-group"><label><i class="fas fa-phone"></i> Mother's Phone No</label><input
+                            type="tel" name="motherPhoneParent"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-envelope"></i> Father's Email Id</label><input type="email" name="fatherEmail"></div>
-                    <div class="input-group"><label><i class="fas fa-envelope"></i> Mother's Email Id</label><input type="email" name="motherEmail"></div>
+                    <div class="input-group"><label><i class="fas fa-envelope"></i> Father's Email Id</label><input
+                            type="email" name="fatherEmail"></div>
+                    <div class="input-group"><label><i class="fas fa-envelope"></i> Mother's Email Id</label><input
+                            type="email" name="motherEmail"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-rupee-sign"></i> Father's Annual Income</label><input type="number" name="fatherIncome"></div>
-                    <div class="input-group"><label><i class="fas fa-rupee-sign"></i> Mother's Annual Income</label><input type="number" name="motherIncome"></div>
+                    <div class="input-group"><label><i class="fas fa-rupee-sign"></i> Father's Annual
+                            Income</label><input type="number" name="fatherIncome"></div>
+                    <div class="input-group"><label><i class="fas fa-rupee-sign"></i> Mother's Annual
+                            Income</label><input type="number" name="motherIncome"></div>
                 </div>
 
                 <!-- GUARDIAN INFORMATION -->
                 <h3 class="section-title">Guardian Information</h3>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-user"></i> Guardian's Name *</label><input type="text" name="guardianName" required></div>
-                    <div class="input-group"><label><i class="fas fa-phone"></i> Phone No *</label><input type="tel" name="guardianPhone" required></div>
-                    <div class="input-group"><label><i class="fas fa-envelope"></i> Email Id</label><input type="email" name="guardianEmail"></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Guardian's Name *</label><input
+                            type="text" name="guardianName" required></div>
+                    <div class="input-group"><label><i class="fas fa-phone"></i> Phone No *</label><input type="tel"
+                            name="guardianPhone" required></div>
+                    <div class="input-group"><label><i class="fas fa-envelope"></i> Email Id</label><input type="email"
+                            name="guardianEmail"></div>
                 </div>
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-home"></i> Address *</label><textarea name="guardianAddress" rows="2" required></textarea></div>
+                    <div class="input-group full-width"><label><i class="fas fa-home"></i> Address *</label><textarea
+                            name="guardianAddress" rows="2" required></textarea></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-handshake"></i> Relation *</label><input type="text" name="guardianRelation" required></div>
-                    <div class="input-group"><label><i class="fas fa-phone-alt"></i> Emergency Phone No *</label><input type="tel" name="guardianEmergencyPhone" required></div>
+                    <div class="input-group"><label><i class="fas fa-handshake"></i> Relation *</label><input
+                            type="text" name="guardianRelation" required></div>
+                    <div class="input-group"><label><i class="fas fa-phone-alt"></i> Emergency Phone No *</label><input
+                            type="tel" name="guardianEmergencyPhone" required></div>
                 </div>
 
                 <!-- PREVIOUS SCHOOL INFORMATION -->
                 <h3 class="section-title">Previous School Information</h3>
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-school"></i> Name of Previous School *</label><input type="text" name="prevSchoolName" required></div>
+                    <div class="input-group full-width"><label><i class="fas fa-school"></i> Name of Previous School
+                            *</label><input type="text" name="prevSchoolName" required></div>
                 </div>
                 <div class="row">
-                    <div class="input-group full-width"><label><i class="fas fa-map-marker-alt"></i> Address of Previous School *</label><textarea name="prevSchoolAddress" rows="2" required></textarea></div>
+                    <div class="input-group full-width"><label><i class="fas fa-map-marker-alt"></i> Address of Previous
+                            School *</label><textarea name="prevSchoolAddress" rows="2" required></textarea></div>
                 </div>
                 <div class="row">
-                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Last Class/Grade Studied *</label><input type="text" name="lastClass" required></div>
-                    <div class="input-group"><label><i class="fas fa-language"></i> Medium of Instruction *</label><input type="text" name="medium" required></div>
-                    <div class="input-group"><label><i class="fas fa-chart-line"></i> Result *</label><input type="text" name="result" required></div>
+                    <div class="input-group"><label><i class="fas fa-graduation-cap"></i> Last Class/Grade Studied
+                            *</label><input type="text" name="lastClass" required></div>
+                    <div class="input-group"><label><i class="fas fa-language"></i> Medium of Instruction
+                            *</label><input type="text" name="medium" required></div>
+                    <div class="input-group"><label><i class="fas fa-chart-line"></i> Result *</label><input type="text"
+                            name="result" required></div>
                 </div>
 
                 <!-- DOCUMENT UPLOADS -->
                 <h3 class="section-title">Documents to be Submitted</h3>
                 <div class="documents-upload">
-                    <div class="input-group full-width"><label><i class="fas fa-file-pdf"></i> 1. Birth Certificate *</label><input type="file" name="birthCert" accept=".pdf,.jpg,.jpeg,.png" required></div>
-                    <div class="input-group full-width"><label><i class="fas fa-image"></i> 2. Passport Size Photos *</label><input type="file" name="photos" accept=".pdf,.jpg,.jpeg,.png" multiple required></div>
-                    <div class="input-group full-width"><label><i class="fas fa-file-medical"></i> 3. Medical Fitness Certificate *</label><input type="file" name="medicalCert" accept=".pdf,.jpg,.jpeg,.png" required></div>
-                    <div class="input-group full-width"><label><i class="fas fa-id-card"></i> 4. Aadhaar / Bank Passbook *</label><input type="file" name="aadhaarBank" accept=".pdf,.jpg,.jpeg,.png" multiple required></div>
-                    <div class="input-group full-width"><label><i class="fas fa-file-export"></i> 5. Previous School Leaving Certificate</label><input type="file" name="leavingCert" accept=".pdf,.jpg,.jpeg,.png"></div>
-                    <div class="input-group full-width"><label><i class="fas fa-chart-line"></i> 6. Previous School Report Card</label><input type="file" name="reportCard" accept=".pdf,.jpg,.jpeg,.png"></div>
-                    <div class="input-group full-width"><label><i class="fas fa-map-marker-alt"></i> 7. Address Proof *</label><input type="file" name="addressProof" accept=".pdf,.jpg,.jpeg,.png" required></div>
-                    <div class="input-group full-width"><label><i class="fas fa-file-invoice"></i> 8. Caste / Income Certificate</label><input type="file" name="casteIncomeCert" accept=".pdf,.jpg,.jpeg,.png"></div>
-                    <div class="input-group full-width"><label><i class="fas fa-passport"></i> 9. Migration Certificate</label><input type="file" name="migrationCert" accept=".pdf,.jpg,.jpeg,.png"></div>
-                    <div class="input-group full-width"><label><i class="fas fa-chalkboard"></i> 10. Entrance Test Score</label><input type="file" name="entranceTest" accept=".pdf,.jpg,.jpeg,.png"></div>
+                    <div class="input-group full-width"><label><i class="fas fa-file-pdf"></i> 1. Birth Certificate
+                            *</label><input type="file" name="birthCert" accept=".pdf,.jpg,.jpeg,.png" required></div>
+                    <div class="input-group full-width"><label><i class="fas fa-image"></i> 2. Passport Size Photos
+                            *</label><input type="file" name="photos" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    </div>
+                    <div class="input-group full-width"><label><i class="fas fa-file-medical"></i> 3. Medical Fitness
+                            Certificate *</label><input type="file" name="medicalCert" accept=".pdf,.jpg,.jpeg,.png"
+                            required></div>
+                    <div class="input-group full-width"><label><i class="fas fa-id-card"></i> 4. Aadhaar / Bank Passbook
+                            *</label><input type="file" name="aadhaarBank" accept=".pdf,.jpg,.jpeg,.png" multiple
+                            required></div>
+                    <div class="input-group full-width"><label><i class="fas fa-file-export"></i> 5. Previous School
+                            Leaving Certificate</label><input type="file" name="leavingCert"
+                            accept=".pdf,.jpg,.jpeg,.png"></div>
+                    <div class="input-group full-width"><label><i class="fas fa-chart-line"></i> 6. Previous School
+                            Report Card</label><input type="file" name="reportCard" accept=".pdf,.jpg,.jpeg,.png"></div>
+                    <div class="input-group full-width"><label><i class="fas fa-map-marker-alt"></i> 7. Address Proof
+                            *</label><input type="file" name="addressProof" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+                    <div class="input-group full-width"><label><i class="fas fa-file-invoice"></i> 8. Caste / Income
+                            Certificate</label><input type="file" name="casteIncomeCert" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="input-group full-width"><label><i class="fas fa-passport"></i> 9. Migration
+                            Certificate</label><input type="file" name="migrationCert" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="input-group full-width"><label><i class="fas fa-chalkboard"></i> 10. Entrance Test
+                            Score</label><input type="file" name="entranceTest" accept=".pdf,.jpg,.jpeg,.png"></div>
                 </div>
 
                 <!-- SUBMIT BUTTON -->
@@ -392,13 +486,13 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             // Hamburger Menu Toggle
             const hamburger = document.getElementById("hamburger");
             const navMenu = document.querySelector(".nav-menu");
-            
+
             if (hamburger && navMenu) {
-                hamburger.addEventListener("click", function() {
+                hamburger.addEventListener("click", function () {
                     hamburger.classList.toggle("active");
                     navMenu.classList.toggle("active");
                 });
@@ -406,9 +500,9 @@
 
             // Dropdown for Mobile (Click to Toggle)
             const dropdowns = document.querySelectorAll(".dropdown > a");
-            
-            dropdowns.forEach(function(dropdown) {
-                dropdown.addEventListener("click", function(e) {
+
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener("click", function (e) {
                     if (window.innerWidth <= 992) {
                         e.preventDefault();
                         this.parentElement.classList.toggle("active");
@@ -418,9 +512,9 @@
 
             // Close Menu When Clicking Links (Mobile)
             const navLinks = document.querySelectorAll(".nav-menu a");
-            
-            navLinks.forEach(function(link) {
-                link.addEventListener("click", function() {
+
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
                     if (window.innerWidth <= 992 && !this.parentElement.classList.contains("dropdown")) {
                         if (navMenu) navMenu.classList.remove("active");
                         if (hamburger) hamburger.classList.remove("active");
@@ -430,17 +524,17 @@
 
             // Back to Top Button
             const backToTopBtn = document.getElementById("backToTop");
-            
+
             if (backToTopBtn) {
-                window.addEventListener("scroll", function() {
+                window.addEventListener("scroll", function () {
                     if (window.scrollY > 300) {
                         backToTopBtn.classList.add("show");
                     } else {
                         backToTopBtn.classList.remove("show");
                     }
                 });
-                
-                backToTopBtn.addEventListener("click", function() {
+
+                backToTopBtn.addEventListener("click", function () {
                     window.scrollTo({
                         top: 0,
                         behavior: "smooth"
@@ -451,16 +545,16 @@
             // Admission Form Submission
             const admissionForm = document.getElementById("admissionForm");
             const formMessage = document.getElementById("formMessage");
-            
+
             if (admissionForm) {
-                admissionForm.addEventListener("submit", function(e) {
+                admissionForm.addEventListener("submit", function (e) {
                     e.preventDefault();
-                    
+
                     // Simple validation
                     const requiredFields = this.querySelectorAll("[required]");
                     let isValid = true;
-                    
-                    requiredFields.forEach(function(field) {
+
+                    requiredFields.forEach(function (field) {
                         if (!field.value.trim()) {
                             isValid = false;
                             field.style.borderColor = "#ff6b6b";
@@ -468,14 +562,14 @@
                             field.style.borderColor = "#ccc";
                         }
                     });
-                    
+
                     if (isValid) {
                         formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Form submitted successfully! We will contact you soon.';
                         formMessage.style.color = "#28a745";
                         formMessage.style.display = "block";
-                        
+
                         // Reset form after 3 seconds
-                        setTimeout(function() {
+                        setTimeout(function () {
                             admissionForm.reset();
                             formMessage.style.display = "none";
                         }, 3000);
@@ -483,17 +577,17 @@
                         formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill all required fields.';
                         formMessage.style.color = "#ff6b6b";
                         formMessage.style.display = "block";
-                        
-                        setTimeout(function() {
+
+                        setTimeout(function () {
                             formMessage.style.display = "none";
                         }, 3000);
                     }
                 });
-                
+
                 // Remove red border on input
                 const inputs = admissionForm.querySelectorAll("input, textarea");
-                inputs.forEach(function(input) {
-                    input.addEventListener("input", function() {
+                inputs.forEach(function (input) {
+                    input.addEventListener("input", function () {
                         this.style.borderColor = "#ccc";
                     });
                 });
@@ -502,25 +596,25 @@
             // Newsletter Form Validation
             const newsletterForm = document.getElementById("newsletterForm");
             const msgSpan = document.getElementById("msg");
-            
+
             if (newsletterForm) {
-                newsletterForm.addEventListener("submit", function(e) {
+                newsletterForm.addEventListener("submit", function (e) {
                     e.preventDefault();
                     const emailInput = this.querySelector('input[type="email"]');
                     const email = emailInput.value.trim();
                     const emailPattern = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
-                    
+
                     if (email && emailPattern.test(email)) {
                         msgSpan.innerHTML = "✅ Subscribed successfully!";
                         msgSpan.style.color = "#CFA349";
                         emailInput.value = "";
-                        setTimeout(function() {
+                        setTimeout(function () {
                             msgSpan.innerHTML = "";
                         }, 3000);
                     } else {
                         msgSpan.innerHTML = "❌ Please enter a valid email address.";
                         msgSpan.style.color = "#ff6b6b";
-                        setTimeout(function() {
+                        setTimeout(function () {
                             msgSpan.innerHTML = "";
                         }, 3000);
                     }
