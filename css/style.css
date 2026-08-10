@@ -423,27 +423,33 @@
   }
 
   .feature-card:nth-child(1) {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
   .feature-card:nth-child(2) {
-    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    /* background: linear-gradient(135deg, #43e97b, #38f9d7); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
   .feature-card:nth-child(3) {
-    background: linear-gradient(135deg, #fa709a, #fee140);
-  }
+    /* background: linear-gradient(135deg, #fa709a, #fee140); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
+  } 
 
   .feature-card:nth-child(4) {
+    /* background: linear-gradient(135deg, #30cfd0, #330867); */
     background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
   .feature-card:nth-child(5) {
-    background: linear-gradient(135deg, #f6d365, #fda085);
+    /* background: linear-gradient(135deg, #f6d365, #fda085); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
   .feature-card:nth-child(6) {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* background: linear-gradient(135deg, #667eea, #764ba2); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
   .feature-card i {

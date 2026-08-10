@@ -419,7 +419,7 @@ body {
 }
 
 /* PDF Download Button */
-.pdf-download {
+/* .pdf-download {
   text-align: center;
   margin-top: 50px;
 }
@@ -447,7 +447,7 @@ body {
 
 .pdf-btn i {
   font-size: 20px;
-}
+} */
 
 /* ========== FOOTER ========== */
 .footer {
