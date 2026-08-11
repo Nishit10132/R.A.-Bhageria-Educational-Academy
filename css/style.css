@@ -452,6 +452,16 @@
     background: linear-gradient(135deg, #30cfd0, #330867);
   }
 
+  .feature-card:nth-child(7) {
+    /* background: linear-gradient(135deg, #667eea, #764ba2); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
+  }
+
+  .feature-card:nth-child(8) {
+    /* background: linear-gradient(135deg, #667eea, #764ba2); */
+    background: linear-gradient(135deg, #30cfd0, #330867);
+  }
+
   .feature-card i {
     font-size: 45px;
     margin-bottom: 15px;
